@@ -58,7 +58,8 @@ namespace Infraestructure.Repositories
 
         public Task<bool> UpdateSystemUsersAsync(object systemUsersData)
         {
-            throw new NotImplementedException();
+            var systemUsersEntity = ConvertToSystemUsersEntity(systemUsersData);
+            return UpdateAsync(systemUsersEntity);
         }
 
         // ===== MÉTODOS AUXILIARES =====

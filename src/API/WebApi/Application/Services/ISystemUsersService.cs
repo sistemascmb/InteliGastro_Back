@@ -7,7 +7,7 @@ namespace WebApi.Application.Services
         Task<SystemUsersDto> CreateSystemUsersAsync(CreateSystemUsersDto createSystemUsersDto);
         Task<SystemUsersDto> GetSystemUsersByIdAsync(long UserId);
         Task<SystemUsersDto> UpdateSystemUsersAsync(UpdateSystemUsersDto updateSystemUsersDto);
-        Task<bool> DeleteSystemUsersAsync(long personaId, long? eliminadoPor = null);
+        Task<bool> DeleteSystemUsersAsync(long personaId, string eliminadoPor);
         Task<SystemUsersDto> GetSystemUsersCompletaAsync(long UserId);
     }
 }

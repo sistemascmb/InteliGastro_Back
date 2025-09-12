@@ -21,8 +21,11 @@ namespace WebApi.Application.DTO.SystemUsers
         public string DocumentNumber { get; set; }
         public int Version { get; set; }
         public int Estado { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public bool RegistroEliminado { get; set; }
+        //public DateTime FechaCreacion { get; set; }
+        //public bool RegistroEliminado { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+        public string UpdatedBy { get; set; }
 
 
     }

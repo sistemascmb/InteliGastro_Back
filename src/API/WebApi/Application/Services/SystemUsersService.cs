@@ -44,9 +44,50 @@ namespace WebApi.Application.Services
             return systemUserDto;
         }
 
-        public Task<bool> DeleteSystemUsersAsync(long personaId, long? eliminadoPor = null)
+        public async Task<bool> DeleteSystemUsersAsync(long UserId, string eliminadoPor)
         {
-            throw new NotImplementedException();
+            _logger.LogInformation("Iniciando eliminación lógica de SystemUser ID: {UserId} [CRUD AUTOMÁTICO]", UserId);
+            //validador
+            if (UserId <= 0)
+            {
+                throw new ArgumentException("El ID de la persona debe ser mayor a 0", nameof(UserId));
+            }
+
+            //verificar si existe system_users
+            var systemUserExist = _systemUsersRepository.GetSystemUsersByIdAsync(UserId).Result;    
+            var systemUserExistente = (SystemUsersEntity)systemUserExist;
+            if (systemUserExist == null)
+            {
+                throw new KeyNotFoundException($"No se encontró el SystemUsers con ID: {UserId}");
+            }
+
+            //verificarmos que no estè eliminado lògicamente
+            if (systemUserExistente.RegistroEliminado)
+            {
+                throw new InvalidOperationException($"No se puede eliminar el SystemUsers con ID: {UserId} porque está eliminado lógicamente.");
+            }
+
+            //usar crud del repositorio
+            systemUserExistente.IsDeleted = true;
+            systemUserExistente.RegistroEliminado = true;
+            systemUserExistente.UpdatedAt = DateTime.UtcNow;
+            systemUserExistente.UpdatedBy = eliminadoPor;
+
+            //if (eliminadoPor.HasValue)
+            //{
+            //    systemUserExistente.UpdatedBy = eliminadoPor.Value;
+            //}
+
+            var eliminacionExitosa = await _systemUsersRepository.UpdateSystemUsersAsync(systemUserExistente);
+
+            if (!eliminacionExitosa)
+            {
+                throw new InvalidOperationException($"No se pudo eliminar lógicamente el SystemUsers con ID: {UserId}");
+            }
+
+            _logger.LogInformation("SystemUsers con ID: {UserId} eliminado lógicamente exitosamente.", UserId);
+
+            return true;
         }
 
         public async Task<SystemUsersDto> GetSystemUsersByIdAsync(long UserId)
@@ -88,9 +129,78 @@ namespace WebApi.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<SystemUsersDto> UpdateSystemUsersAsync(UpdateSystemUsersDto updateSystemUsersDto)
+        public async Task<SystemUsersDto> UpdateSystemUsersAsync(UpdateSystemUsersDto updateSystemUsersDto)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _logger.LogInformation("Iniciando actualización de SystemUser  ID: {PersonaId} [CRUD AUTOMÁTICO]", updateSystemUsersDto.UserId);
+
+                // Validar DataAnnotations del DTO
+                //ValidateDataAnnotations(updatePersonaDto);
+
+                // Normalizar datos
+                //updatePersonaDto.Normalize();
+
+                // Validar reglas de negocio específicas
+                //var validationErrors = updatePersonaDto.GetValidationErrors();
+                //if (validationErrors.Any())
+                //{
+                //    var errorMessage = string.Join("; ", validationErrors);
+                //    _logger.LogWarning("Errores de validación de reglas de negocio: {Errors}", errorMessage);
+                //    throw new ArgumentException(errorMessage);
+                //}
+
+                //verificar si existe system_users
+                var systemUserExist = _systemUsersRepository.GetSystemUsersByIdAsync(updateSystemUsersDto.UserId).Result;
+                if (systemUserExist == null)
+                {
+                    throw new KeyNotFoundException($"No se encontró el SystemUsers con ID: {updateSystemUsersDto.UserId}");
+                }
+
+                var systemUserExistente = (SystemUsersEntity)systemUserExist;
+
+                //verificarmos que no estè eliminado lògicamente
+                if (systemUserExistente.RegistroEliminado)
+                {
+                    throw new InvalidOperationException($"No se puede actualizar el SystemUsers con ID: {updateSystemUsersDto.UserId} porque está eliminado lógicamente.");
+                }
+
+                var systemUserEntity = _mapper.Map<SystemUsersEntity>(updateSystemUsersDto);
+                systemUserEntity.FechaCreacion = systemUserExistente.FechaCreacion;
+                systemUserEntity.RegistroEliminado = false;
+                systemUserEntity.CreatedAt = systemUserExistente.CreatedAt;
+                systemUserEntity.CreatedBy = systemUserExistente.CreatedBy;
+                systemUserEntity.IsDeleted = false;
+                //systemUserEntity.UpdatedAt = DateTime.UtcNow;
+                //systemUserEntity.UpdatedBy = systemUserExistente.UpdatedBy; //suponiendo que viene en el dto
+
+                //usar crud del repositorio
+                var actualizacionExitosa = await _systemUsersRepository.UpdateSystemUsersAsync(systemUserEntity);
+
+                if (!actualizacionExitosa)
+                {
+                    throw new InvalidOperationException($"No se pudo actualizar el SystemUsers con ID: {updateSystemUsersDto.UserId}");
+                }
+
+                _logger.LogInformation("SystemUsers con ID: {UserId} actualizado exitosamente.", updateSystemUsersDto.UserId);
+
+                //obtener SystemUsers actualizado
+                var systemUserActualizado = await _systemUsersRepository.GetSystemUsersByIdAsync(updateSystemUsersDto.UserId);
+                if (systemUserActualizado == null)
+                {
+                    throw new InvalidOperationException($"No se puedo obtener el SystemUsers actualizado con ID: {updateSystemUsersDto.UserId}");
+                }
+
+                var systemUserEntity2 = (SystemUsersEntity)systemUserActualizado;
+                var systemUserDto = _mapper.Map<SystemUsersDto>(systemUserEntity2);
+
+                return systemUserDto;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al actualizar SystemUsers ID: {UserId}", updateSystemUsersDto.UserId);
+                throw;
+            }
         }
     }
 }
