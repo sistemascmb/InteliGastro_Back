@@ -1,13 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper.Contrib.Extensions;
 
 namespace Domain.Entities
 {
     public class ArchivoDigital
     {
+        [Dapper.Contrib.Extensions.Key]
         public int IdArchivo { get; set; }
         public DateTime Fecha { get; set; }
         public string Hora { get; set; }

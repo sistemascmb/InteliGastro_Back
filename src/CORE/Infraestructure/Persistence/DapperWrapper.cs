@@ -1,5 +1,5 @@
 using Dapper;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 
@@ -18,19 +18,19 @@ namespace Infraestructure.Persistence
 
         public async Task<IEnumerable<T>> QueryAsync<T>(string storedProcedure, object? parameters = null)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             return await connection.QueryAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<T?> QueryFirstOrDefaultAsync<T>(string storedProcedure, object? parameters = null)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             return await connection.QueryFirstOrDefaultAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<(IEnumerable<T1> first, IEnumerable<T2> second)> QueryMultipleAsync<T1, T2>(string storedProcedure, object? parameters = null)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             using SqlMapper.GridReader gridReader = await connection.QueryMultipleAsync(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
             IEnumerable<T1> first = await gridReader.ReadAsync<T1>();
             IEnumerable<T2> second = await gridReader.ReadAsync<T2>();
@@ -39,19 +39,19 @@ namespace Infraestructure.Persistence
 
         public async Task<int> ExecuteAsync(string storedProcedure, object? parameters = null)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             return await connection.ExecuteAsync(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<T> ExecuteScalarAsync<T>(string storedProcedure, object? parameters = null)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             return await connection.ExecuteScalarAsync<T>(storedProcedure, parameters, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<T> ExecuteInTransactionAsync<T>(Func<IDbTransaction, Task<T>> operation)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             using IDbTransaction transaction = connection.BeginTransaction();
             try
             {
@@ -68,7 +68,7 @@ namespace Infraestructure.Persistence
 
         public async Task ExecuteInTransactionAsync(Func<IDbTransaction, Task> operation)
         {
-            using SqlConnection connection = await GetSqlConnectionAsync();
+            using NpgsqlConnection connection = await GetNpgsqlConnectionAsync();
             using IDbTransaction transaction = connection.BeginTransaction();
             try
             {
@@ -84,13 +84,13 @@ namespace Infraestructure.Persistence
 
         public async Task<IDbConnection> GetConnectionAsync()
         {
-            return await GetSqlConnectionAsync();
+            return await GetNpgsqlConnectionAsync();
         }
 
-        private async Task<SqlConnection> GetSqlConnectionAsync()
+        private async Task<NpgsqlConnection> GetNpgsqlConnectionAsync()
         {
             string connectionString = GetConnectionString();
-            SqlConnection connection = new SqlConnection(connectionString);
+            NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             await connection.OpenAsync();
             return connection;
         }

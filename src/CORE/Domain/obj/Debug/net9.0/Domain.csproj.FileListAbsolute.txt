@@ -21,3 +21,4 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.d
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\refint\Domain.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.pdb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\ref\Domain.dll
+D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache

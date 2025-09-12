@@ -146,6 +146,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Dapper.Contrib.Extensions.Tablename": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -220,13 +226,17 @@
               "target": "Package",
               "version": "[2.1.66, )"
             },
-            "Microsoft.Data.SqlClient": {
+            "Dapper.Contrib.Extensions.Tablename": {
               "target": "Package",
-              "version": "[6.1.1, )"
+              "version": "[1.1.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[9.0.8, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             }
           },
           "imports": [

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
-    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
+    <PackageReference Include="Dapper.Contrib.Extensions.Tablename" Version="1.1.1" />
+    <PackageReference Include="Npgsql" Version="8.0.5" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
   </ItemGroup>
 
