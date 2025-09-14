@@ -3,7 +3,7 @@ using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using WebApi.Application.DTO.SystemUsers;
 
-namespace WebApi.Application.Services
+namespace WebApi.Application.Services.SystemUsersService
 {
     public class SystemUsersService : ISystemUsersService
     {

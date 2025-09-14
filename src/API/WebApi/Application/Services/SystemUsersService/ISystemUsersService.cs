@@ -1,6 +1,6 @@
 ﻿using WebApi.Application.DTO.SystemUsers;
 
-namespace WebApi.Application.Services
+namespace WebApi.Application.Services.SystemUsersService
 {
     public interface ISystemUsersService
     {

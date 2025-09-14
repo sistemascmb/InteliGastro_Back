@@ -3,6 +3,7 @@ using Dapper.Contrib.Extensions;
 using Npgsql;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Infraestructure.Helpers;
 
 namespace Infraestructure.Repositories.Base
 {
@@ -30,6 +31,9 @@ namespace Infraestructure.Repositories.Base
                 await connection.OpenAsync();
 
                 _logger.LogInformation("Creando nueva entidad en tabla {TableName}", _tableName);
+
+                // Convertir DateTimeOffset a UTC para PostgreSQL
+                DateTimeOffsetHelper.ConvertDateTimeOffsetsToUtc(entity);
 
                 var id = await connection.InsertAsync(entity);
 
@@ -199,6 +203,9 @@ namespace Infraestructure.Repositories.Base
                 await connection.OpenAsync();
 
                 _logger.LogInformation("Actualizando entidad en tabla {TableName}", _tableName);
+
+                // Convertir DateTimeOffset a UTC para PostgreSQL
+                DateTimeOffsetHelper.ConvertDateTimeOffsetsToUtc(entity);
 
                 var result = await connection.UpdateAsync(entity);
 

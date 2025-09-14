@@ -71,7 +71,7 @@ namespace Infraestructure.Repositories
 
             // Aquí podrías implementar un mapper más sofisticado
             // Por ahora, manejo básico para demostración
-            var persona = new SystemUsersEntity();
+            var systemUsers = new SystemUsersEntity();
 
             var properties = data.GetType().GetProperties();
             var targetProperties = typeof(SystemUsersEntity).GetProperties();
@@ -84,12 +84,12 @@ namespace Infraestructure.Repositories
                     var value = prop.GetValue(data);
                     if (value != null)
                     {
-                        targetProp.SetValue(persona, value);
+                        targetProp.SetValue(systemUsers, value);
                     }
                 }
             }
 
-            return persona;
+            return systemUsers;
         }
     }
 }

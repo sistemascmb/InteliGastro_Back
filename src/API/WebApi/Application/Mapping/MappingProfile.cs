@@ -3,6 +3,7 @@ using Domain.Entities;
 using Infraestructure.Models;
 using Microsoft.AspNetCore.Hosting.Server;
 using WebApi.Application.DTO.ArchivoDigital;
+using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.SystemUsers;
 
 namespace WebApi.Application.Mapping
@@ -31,6 +32,7 @@ namespace WebApi.Application.Mapping
                 .ForMember(destino => destino.TipoArchivo, option => option.Ignore())
                 .ForMember(destino => destino.IdAtencion, option => option.Ignore())
                 .ForMember(destino => destino.Historia, option => option.Ignore());
+
             //SystemUsers
             CreateMap<SystemUsersEntity, SystemUsersDto>()
                 .ForMember(dest => dest.userid, opt => opt.MapFrom(src => src.userid))
@@ -109,6 +111,69 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
 
+            //Centro
+            CreateMap<CentroEntity, CentroDto>()
+                .ForMember(dest => dest.centroid, opt => opt.MapFrom(src => src.centroid))
+                .ForMember(dest => dest.Nombre, opt => opt.MapFrom(src => src.Nombre))
+                .ForMember(dest => dest.Descripcion, opt => opt.MapFrom(src => src.Descripcion))
+                .ForMember(dest => dest.Abreviatura, opt => opt.MapFrom(src => src.Abreviatura))
+                .ForMember(dest => dest.InicioAtencion, opt => opt.MapFrom(src => src.InicioAtencion))
+                .ForMember(dest => dest.FinAtencion, opt => opt.MapFrom(src => src.FinAtencion))
+                .ForMember(dest => dest.Direccion, opt => opt.MapFrom(src => src.Direccion))
+                .ForMember(dest => dest.Telefono, opt => opt.MapFrom(src => src.Telefono))
+                .ForMember(dest => dest.Departamento, opt => opt.MapFrom(src => src.Departamento))
+                .ForMember(dest => dest.Provincia, opt => opt.MapFrom(src => src.Provincia))
+                .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
+                .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
+                .ForMember(dest => dest.RUC, opt => opt.MapFrom(src => src.RUC))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateCentroDto, CentroEntity>()
+                .ForMember(dest => dest.centroid, opt => opt.Ignore()) // Se genera automáticamente
+                .ForMember(dest => dest.Nombre, opt => opt.MapFrom(src => src.Nombre))
+                .ForMember(dest => dest.Descripcion, opt => opt.MapFrom(src => src.Descripcion))
+                .ForMember(dest => dest.Abreviatura, opt => opt.MapFrom(src => src.Abreviatura))
+                .ForMember(dest => dest.InicioAtencion, opt => opt.MapFrom(src => src.InicioAtencion))
+                .ForMember(dest => dest.FinAtencion, opt => opt.MapFrom(src => src.FinAtencion))
+                .ForMember(dest => dest.Direccion, opt => opt.MapFrom(src => src.Direccion))
+                .ForMember(dest => dest.Telefono, opt => opt.MapFrom(src => src.Telefono))
+                .ForMember(dest => dest.Departamento, opt => opt.MapFrom(src => src.Departamento))
+                .ForMember(dest => dest.Provincia, opt => opt.MapFrom(src => src.Provincia))
+                .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
+                .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
+                .ForMember(dest => dest.RUC, opt => opt.MapFrom(src => src.RUC))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateCentroDto, CentroEntity>()
+                .ForMember(dest => dest.centroid, opt => opt.MapFrom(src => src.centroid))
+                .ForMember(dest => dest.Nombre, opt => opt.MapFrom(src => src.Nombre))
+                .ForMember(dest => dest.Descripcion, opt => opt.MapFrom(src => src.Descripcion))
+                .ForMember(dest => dest.Abreviatura, opt => opt.MapFrom(src => src.Abreviatura))
+                .ForMember(dest => dest.InicioAtencion, opt => opt.MapFrom(src => src.InicioAtencion))
+                .ForMember(dest => dest.FinAtencion, opt => opt.MapFrom(src => src.FinAtencion))
+                .ForMember(dest => dest.Direccion, opt => opt.MapFrom(src => src.Direccion))
+                .ForMember(dest => dest.Telefono, opt => opt.MapFrom(src => src.Telefono))
+                .ForMember(dest => dest.Departamento, opt => opt.MapFrom(src => src.Departamento))
+                .ForMember(dest => dest.Provincia, opt => opt.MapFrom(src => src.Provincia))
+                .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
+                .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
+                .ForMember(dest => dest.RUC, opt => opt.MapFrom(src => src.RUC))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
 
 
 

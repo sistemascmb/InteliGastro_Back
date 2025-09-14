@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.DTO.SystemUsers;
-using WebApi.Application.Services;
+using WebApi.Application.Services.SystemUsersService;
 
 namespace WebApi.Controllers
 {

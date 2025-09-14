@@ -10,10 +10,17 @@ using WebApi.Application.Services;
 using Dapper;
 using System.Linq;
 using System.Reflection;
+using WebApi.Application.Services.SystemUsersService;
+using WebApi.Application.Services.Centro;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
 
 AppContext.SetSwitch("Microsoft.AspNetCore.Mvc.ApiExplorer.EnableEnhancedModelMetadata", true);
+
+// Configurar Npgsql para manejar DateTimeOffset con timezone UTC
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+NpgsqlConnection.GlobalTypeMapper.EnableDynamicJson();
 
 // Configurar mapeo de columnas para Dapper
 SqlMapper.Settings.CommandTimeout = 30;
@@ -41,6 +48,8 @@ builder.Services.AddScoped<ICurrentArchivoDigital, CurrentArchivoDigitalService>
 builder.Services.AddScoped<IArchivoDigitalService, ArchivoDigitalService>();
 builder.Services.AddScoped<ISystemUsersRepository, SystemUsersRepository>();
 builder.Services.AddScoped<ISystemUsersService, SystemUsersService>();
+builder.Services.AddScoped<ICentroRepository, CentroRepository>();
+builder.Services.AddScoped<ICentroService, Centroservice>();
 
 var app = builder.Build();
 
