@@ -13,6 +13,7 @@ using System.Reflection;
 using WebApi.Application.Services.SystemUsersService;
 using WebApi.Application.Services.Centro;
 using Npgsql;
+using WebApi.Application.Services.Personal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +51,9 @@ builder.Services.AddScoped<ISystemUsersRepository, SystemUsersRepository>();
 builder.Services.AddScoped<ISystemUsersService, SystemUsersService>();
 builder.Services.AddScoped<ICentroRepository, CentroRepository>();
 builder.Services.AddScoped<ICentroService, Centroservice>();
+builder.Services.AddScoped<IPersonalRepository, PersonalRepository>();
+builder.Services.AddScoped<IPersonalService, PersonalService>();
+
 
 var app = builder.Build();
 
