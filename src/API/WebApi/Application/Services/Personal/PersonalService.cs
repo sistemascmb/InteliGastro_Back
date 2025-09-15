@@ -43,7 +43,7 @@ namespace WebApi.Application.Services.Personal
                     throw new InvalidOperationException($"El Centro con ID: {createPersonalDto.CentroId} está eliminado lógicamente. No se puede crear el personal.");
                 }
                 
-                var personalEntity = _mapper.Map<Infraestructure.Models.PersonalEntity>(createPersonalDto);
+                var personalEntity = _mapper.Map<PersonalEntity>(createPersonalDto);
                 personalEntity.IsDeleted = false;
                 personalEntity.CreatedAt = DateTime.UtcNow;
                 var personalId = _personalRepository.CreatePersonalAsync(personalEntity).Result;

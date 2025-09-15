@@ -1,19 +1,20 @@
 //using WebApi.Application.Configuration;
 using API_CMB.src.API.WebApi.Middleware;
+using Dapper;
 using Domain.DomainInterfaces;
 using Domain.RepositoriesInterfaces;
 using Infraestructure.Persistence;
 using Infraestructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
-using WebApi.Application.Mapping;
-using WebApi.Application.Services;
-using Dapper;
+using Npgsql;
 using System.Linq;
 using System.Reflection;
-using WebApi.Application.Services.SystemUsersService;
+using WebApi.Application.Mapping;
+using WebApi.Application.Services;
 using WebApi.Application.Services.Centro;
-using Npgsql;
+using WebApi.Application.Services.Estudios;
 using WebApi.Application.Services.Personal;
+using WebApi.Application.Services.SystemUsersService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,8 @@ builder.Services.AddScoped<ICentroRepository, CentroRepository>();
 builder.Services.AddScoped<ICentroService, Centroservice>();
 builder.Services.AddScoped<IPersonalRepository, PersonalRepository>();
 builder.Services.AddScoped<IPersonalService, PersonalService>();
+builder.Services.AddScoped<IEstudiosRepository, EstudiosRepository>();
+builder.Services.AddScoped<IEstudiosService, EstudiosService>();
 
 
 var app = builder.Build();
