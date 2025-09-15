@@ -11,6 +11,8 @@ namespace Domain.DomainInterfaces
         Task<long> CreatePersonalAsync(object personalData);
         Task<object?> GetPersonalByIdAsync(long personalId);
         Task<bool> UpdatePersonalAsync(object personalData);
+
+        Task<IEnumerable<object>> GetAllPersonalsAsync();
         //Task<bool> DeletePersonalAsync(long personalId);
         //Task<bool> ExistsPersonalAsync(long personalId);  
     }

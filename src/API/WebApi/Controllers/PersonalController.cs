@@ -69,5 +69,28 @@ namespace WebApi.Controllers
             var result = await _personalService.DeletePersonalAsync(id, eliminadoPor);
             return Ok(result);
         }
+
+        [HttpGet]   
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetAllPersonals()
+        {
+            _logger.LogInformation("Iniciando endpoint GetAllPersonals [CRUD AUTOMÁTICO]");
+            var result = await _personalService.GetAllPersonalsAsync();
+            return Ok(result);
+        }
+
+        [HttpGet]   
+        [Route("search")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetWhere([FromQuery] string condicion)
+        {
+            _logger.LogInformation("Iniciando endpoint GetWhere con condición: {Condicion} [CRUD AUTOMÁTICO]", condicion);
+            var result = await _personalService.GetWhereAsync(condicion);
+            return Ok(result);
+        }   
     }
 }

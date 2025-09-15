@@ -8,5 +8,8 @@ namespace WebApi.Application.Services.Personal
         Task<PersonalDto> GetPersonalByIdAsync(long personalId);
         Task<PersonalDto> UpdatePersonalAsync(UpdatePersonalDto updatePersonalDto);
         Task<bool> DeletePersonalAsync(long personalId, string eliminadoPor);
+        Task<IEnumerable<PersonalDto>> GetWhereAsync(string condicion);
+        Task<IEnumerable<PersonalDto>> GetAllPersonalsAsync();
+        
     }
 }

@@ -102,6 +102,25 @@ namespace WebApi.Application.Services.Personal
             }
         }
 
+        public async Task<IEnumerable<PersonalDto>> GetAllPersonalsAsync()
+        {
+           Task<IEnumerable<PersonalDto>> personalsDto;
+              try
+              {
+                _logger.LogInformation("Iniciando obtención de todos los Personals");
+                var personals = _personalRepository.GetAllPersonalsAsync().Result;
+                var personalsList = personals.Where(p => !((PersonalEntity)p).IsDeleted).ToList();
+                personalsDto = Task.FromResult(_mapper.Map<IEnumerable<PersonalDto>>(personalsList));
+                _logger.LogInformation("Obtención de todos los Personals exitosa. Total: {Total}", personalsList.Count);
+                return await personalsDto;
+            }
+              catch (Exception ex)
+              {
+                _logger.LogError(ex, "Error al obtener todos los personals");
+                throw;
+            }
+        }
+
         public async Task<PersonalDto> GetPersonalByIdAsync(long personalId)
         {
             try
@@ -130,6 +149,33 @@ namespace WebApi.Application.Services.Personal
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        public Task<IEnumerable<PersonalDto>> GetWhereAsync(string condicion)
+        {
+            PersonalDto[] personalsDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de Personal con condición: {condicion}", condicion);
+                var personals = _personalRepository.GetAllPersonalsAsync().Result;
+                var personalsList = personals.Where(p => !((PersonalEntity)p).IsDeleted).ToList();
+                // Aplicar la condición de filtrado (esto es un ejemplo simple, ajustar según la lógica real)
+                if (!string.IsNullOrWhiteSpace(condicion))
+                {
+                    personalsList = personalsList
+                        .Where(p => ((PersonalEntity)p).Nombres.Contains(condicion, StringComparison.OrdinalIgnoreCase) ||
+                                    ((PersonalEntity)p).Apellidos.Contains(condicion, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+                }
+                personalsDto = _mapper.Map<PersonalDto[]>(personalsList);
+                _logger.LogInformation("Obtención de Personals con condición exitosa. Total: {Total}", personalsDto.Length);
+                return Task.FromResult((IEnumerable<PersonalDto>)personalsDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener personals con condición: {condicion}", condicion);
                 throw;
             }
         }

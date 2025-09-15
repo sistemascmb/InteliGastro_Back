@@ -28,6 +28,12 @@ namespace Infraestructure.Repositories
             return await CreateAsync(personalEntity);
         }
 
+        public Task<IEnumerable<object>> GetAllPersonalsAsync()
+        {
+            Task<IEnumerable<PersonalEntity>> personals = GetAllAsync();
+            return personals.ContinueWith(t => t.Result.Cast<object>());
+        }
+
         public async Task<object?> GetPersonalByIdAsync(long personalId)
         {
             var personal = await GetByIdAsync(personalId);
