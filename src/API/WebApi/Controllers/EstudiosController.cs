@@ -66,7 +66,7 @@ namespace WebApi.Controllers
         {
             _logger.LogInformation("Iniciando endpoint DeleteEstudios con ID: {EstudiosId} [CRUD AUTOMÁTICO]", id);
             var result = await _estudiosService.DeleteEstudiosAsync(id, eliminadoPor);
-            return NoContent();
+            return Ok(result);
         }
 
         [HttpGet]

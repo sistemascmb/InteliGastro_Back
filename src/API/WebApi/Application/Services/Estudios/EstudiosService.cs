@@ -59,7 +59,7 @@ namespace WebApi.Application.Services.Estudios
                     throw new Exception("Error al recuperar el estudio recién creado.");
                 }
 
-                var newEstudiosDto = _mapper.Map<EstudiosDto>(newEstudios);
+                var newEstudiosDto = _mapper.Map<EstudiosEntity>(newEstudios);
                 var estudiosDto = _mapper.Map<EstudiosDto>(newEstudios);
                 return estudiosDto;
             }
@@ -181,7 +181,7 @@ namespace WebApi.Application.Services.Estudios
             }
             catch (Exception)
             {
-
+                _logger.LogError("Error al obtener los estudios con condición: {condicion}", condicion);
                 throw;
             }
         }
