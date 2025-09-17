@@ -141,9 +141,9 @@ namespace WebApi.Application.Services.Salas
                 _logger.LogInformation("Sala recuperada con ID: {SalasId}", salasId);
                 return salasDto;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _logger.LogError(ex, "Error al recuperar las salas.");
                 throw;
             }
         }

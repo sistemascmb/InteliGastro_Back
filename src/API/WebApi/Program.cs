@@ -14,6 +14,7 @@ using WebApi.Application.Services;
 using WebApi.Application.Services.Centro;
 using WebApi.Application.Services.Estudios;
 using WebApi.Application.Services.Personal;
+using WebApi.Application.Services.Recursos;
 using WebApi.Application.Services.Salas;
 using WebApi.Application.Services.SystemUsersService;
 
@@ -59,6 +60,9 @@ builder.Services.AddScoped<IEstudiosRepository, EstudiosRepository>();
 builder.Services.AddScoped<IEstudiosService, EstudiosService>();
 builder.Services.AddScoped<ISalasRepository, SalasRepository>();
 builder.Services.AddScoped<ISalasService, SalasService>();
+builder.Services.AddScoped<IRecursosRepository, RecursosRepository>();
+builder.Services.AddScoped<IRecursosService, RecursosService>();
+
 
 var app = builder.Build();
 
