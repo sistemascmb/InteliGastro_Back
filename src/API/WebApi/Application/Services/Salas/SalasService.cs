@@ -73,35 +73,44 @@ namespace WebApi.Application.Services.Salas
 
         public async Task<bool> DeleteSalasAsync(long salasId, string eliminadoPor)
         {
-            _logger.LogInformation("Iniciando eliminación lógica de sala con ID: {SalasId}", salasId);
-            if (salasId <= 0)
+            try
             {
-                throw new ArgumentException("El ID de la sala debe ser maypr a 0.", nameof(salasId));
-            }
+                _logger.LogInformation("Iniciando eliminación lógica de sala con ID: {SalasId}", salasId);
+                if (salasId <= 0)
+                {
+                    throw new ArgumentException("El ID de la sala debe ser maypr a 0.", nameof(salasId));
+                }
 
-            var salasExiste = await _salasRepository.GetSalasByIdAsync(salasId);
-            var salasExistentes = (SalasEntity)salasExiste;
-            if (salasExiste == null)
+                var salasExiste = await _salasRepository.GetSalasByIdAsync(salasId);
+                var salasExistentes = (SalasEntity)salasExiste;
+                if (salasExiste == null)
+                {
+                    throw new KeyNotFoundException($"No se encontró la sala con ID: {salasId}. No se puede eliminar.");
+                }
+
+                if (salasExistentes.IsDeleted)
+                {
+                    throw new InvalidOperationException($"La sala con ID: {salasId} ya está eliminada lógicamente.");
+                }
+
+                salasExistentes.IsDeleted = true;
+                salasExistentes.UpdatedAt = DateTime.UtcNow;
+                salasExistentes.UpdatedBy = eliminadoPor;
+
+                var result = await _salasRepository.UpdateSalasAsync(salasExistentes);
+                if (!result)
+                {
+                    throw new InvalidOperationException($"No se pudo eliminar la Sala con ID: {salasId}.");
+                }
+                _logger.LogInformation("Sala con ID: {SalasId} eliminada lógicamente.", salasId);
+                return result;
+            }
+            catch (Exception ex)
             {
-                throw new KeyNotFoundException($"No se encontró la sala con ID: {salasId}. No se puede eliminar.");
+                _logger.LogError(ex, "Error al eliminar el Estudio con ID: {salasId}", salasId);
+                throw;
             }
-
-            if (salasExistentes.IsDeleted)
-            {
-                throw new InvalidOperationException($"La sala con ID: {salasId} ya está eliminada lógicamente.");
-            }
-
-            salasExistentes.IsDeleted = true;
-            salasExistentes.UpdatedAt = DateTime.UtcNow;
-            salasExistentes.UpdatedBy = eliminadoPor;
-
-            var result = await _salasRepository.UpdateSalasAsync(salasExistentes);
-            if (!result)
-            {
-                throw new InvalidOperationException($"No se pudo eliminar la Sala con ID: {salasId}.");
-            }
-            _logger.LogInformation("Sala con ID: {SalasId} eliminada lógicamente.", salasId);
-            return result;
+            
         }
 
         public async Task<IEnumerable<SalasDto>> GetAllSalasAsync()

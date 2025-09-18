@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting.Server;
 using WebApi.Application.DTO.ArchivoDigital;
 using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Estudios;
+using WebApi.Application.DTO.Examenes;
 using WebApi.Application.DTO.Personal;
 using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.Salas;
@@ -394,6 +395,41 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
 
 
+            //Examenes
+            CreateMap<ExamenesEntity, ExamenesDto>()
+                .ForMember(dest => dest.examsid, opt => opt.MapFrom(src => src.examsid))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Abbreviation, opt => opt.MapFrom(src => src.Abbreviation))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateExamenesDto, ExamenesEntity>()
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Abbreviation, opt => opt.MapFrom(src => src.Abbreviation))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateExamenesDto, ExamenesEntity>()
+                .ForMember(dest => dest.examsid, opt => opt.MapFrom(src => src.examsid))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Abbreviation, opt => opt.MapFrom(src => src.Abbreviation))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
             //CreateMap<ServerFilterRequestDto, ServerFilter>();
         }
     }

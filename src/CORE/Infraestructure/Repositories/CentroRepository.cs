@@ -15,8 +15,6 @@ namespace Infraestructure.Repositories
 {
     public class CentroRepository : BaseCrudRepository<CentroEntity, long>, ICentroRepository
     {
-        private readonly IDapperWrapper _dapperWrapper;
-
         public CentroRepository(
             IConfiguration configuration,
             ILogger<CentroRepository> logger,
@@ -24,7 +22,7 @@ namespace Infraestructure.Repositories
         {
             _dapperWrapper = dapperWrapper ?? throw new ArgumentNullException(nameof(dapperWrapper));
         }
-        
+        private readonly IDapperWrapper _dapperWrapper;
         public async Task<long> CreateCentroAsync(object centroData)
         {
             var centroEntity = ConvertToCentroEntity(centroData);
