@@ -7,6 +7,7 @@ using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Estudios;
 using WebApi.Application.DTO.Examenes;
 using WebApi.Application.DTO.Personal;
+using WebApi.Application.DTO.Preparacion;
 using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.Salas;
 using WebApi.Application.DTO.SystemUsers;
@@ -425,6 +426,36 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Abbreviation, opt => opt.MapFrom(src => src.Abbreviation))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
                 .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //Preparacion
+            CreateMap<PreparacionEntity, PreparacionDto>()
+                .ForMember(dest => dest.preparationid, opt => opt.MapFrom(src => src.preparationid))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreatePreparacionDto, PreparacionEntity>()
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdatePreparacionDto, PreparacionEntity>()
+                .ForMember(dest => dest.preparationid, opt => opt.MapFrom(src => src.preparationid))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
