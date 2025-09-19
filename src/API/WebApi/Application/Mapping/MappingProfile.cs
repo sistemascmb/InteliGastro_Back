@@ -9,6 +9,7 @@ using WebApi.Application.DTO.Examenes;
 using WebApi.Application.DTO.Personal;
 using WebApi.Application.DTO.Preparacion;
 using WebApi.Application.DTO.Recursos;
+using WebApi.Application.DTO.Roles;
 using WebApi.Application.DTO.Salas;
 using WebApi.Application.DTO.Seguros;
 using WebApi.Application.DTO.SystemUsers;
@@ -501,6 +502,37 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
                 .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //Roles
+            CreateMap<RolesEntity, RolesDto>()
+                .ForMember(dest => dest.profiletypeid, opt => opt.MapFrom(src => src.profiletypeid))
+                .ForMember(dest => dest.profile_name, opt => opt.MapFrom(src => src.profile_name))
+                .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateRolesDto, RolesEntity>()
+                .ForMember(dest => dest.profile_name, opt => opt.MapFrom(src => src.profile_name))
+                .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateRolesDto, RolesEntity>()
+                .ForMember(dest => dest.profiletypeid, opt => opt.MapFrom(src => src.profiletypeid))
+                .ForMember(dest => dest.profile_name, opt => opt.MapFrom(src => src.profile_name))
+                .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
             //CreateMap<ServerFilterRequestDto, ServerFilter>();
         }
     }

@@ -17,6 +17,7 @@ using WebApi.Application.Services.Examenes;
 using WebApi.Application.Services.Personal;
 using WebApi.Application.Services.Preparacion;
 using WebApi.Application.Services.Recursos;
+using WebApi.Application.Services.Roles;
 using WebApi.Application.Services.Salas;
 using WebApi.Application.Services.Seguros;
 using WebApi.Application.Services.SystemUsersService;
@@ -71,6 +72,8 @@ builder.Services.AddScoped<IPreparacionRepository, PreparacionRepository>();
 builder.Services.AddScoped<IPreparacionService, PreparacionService>();
 builder.Services.AddScoped<ISegurosRepository, SegurosRepository>();
 builder.Services.AddScoped<ISegurosService, SegurosService>();
+builder.Services.AddScoped<IRolesRepository, RolesRepository>();
+builder.Services.AddScoped<IRolesService, RolesService>();
 var app = builder.Build();
 
 app.UseSwagger(c =>
