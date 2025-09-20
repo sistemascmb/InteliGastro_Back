@@ -19,7 +19,7 @@ namespace Infraestructure.Repositories
         public MacrosRepository(
             IConfiguration configuration,
             ILogger<MacrosRepository> logger,
-            IDapperWrapper dapperWrapper) : base(configuration, logger, "studies")
+            IDapperWrapper dapperWrapper) : base(configuration, logger, "macros")
         {
             _dapperWrapper = dapperWrapper ?? throw new ArgumentNullException(nameof(dapperWrapper));
         }

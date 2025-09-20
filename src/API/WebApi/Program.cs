@@ -11,6 +11,7 @@ using System.Linq;
 using System.Reflection;
 using WebApi.Application.Mapping;
 using WebApi.Application.Services;
+using WebApi.Application.Services.Agenda;
 using WebApi.Application.Services.Centro;
 using WebApi.Application.Services.Estudios;
 using WebApi.Application.Services.Examenes;
@@ -86,6 +87,8 @@ builder.Services.AddScoped<IPlantillaRepository, PlantillaRepository>();
 builder.Services.AddScoped<IPlantillaService, PlantillaService>();
 builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
 builder.Services.AddScoped<IPacienteService, PacienteService>();
+builder.Services.AddScoped<IAgendaRepository, AgendaRepository>();
+builder.Services.AddScoped<IAgendaService, AgendaService>();
 
 var app = builder.Build();
 

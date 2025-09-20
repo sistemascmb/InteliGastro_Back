@@ -2,6 +2,7 @@ using AutoMapper;
 using Domain.Entities;
 using Infraestructure.Models;
 using Microsoft.AspNetCore.Hosting.Server;
+using WebApi.Application.DTO.Agenda;
 using WebApi.Application.DTO.ArchivoDigital;
 using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Estudios;
@@ -738,6 +739,87 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
                 .ForMember(dest => dest.MedicalHistory, opt => opt.MapFrom(src => src.MedicalHistory))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //Agenda
+            CreateMap<AgendaEntity, AgendaDto>()
+                .ForMember(dest => dest.medicalscheduleid, opt => opt.MapFrom(src => src.medicalscheduleid))
+                .ForMember(dest => dest.PacientId, opt => opt.MapFrom(src => src.PacientId))
+                .ForMember(dest => dest.CentroId, opt => opt.MapFrom(src => src.CentroId))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.AppointmentDate, opt => opt.MapFrom(src => src.AppointmentDate))
+                .ForMember(dest => dest.HoursMedicalShedule, opt => opt.MapFrom(src => src.HoursMedicalShedule))
+                .ForMember(dest => dest.TypeofAppointment, opt => opt.MapFrom(src => src.TypeofAppointment))
+                .ForMember(dest => dest.OriginId, opt => opt.MapFrom(src => src.OriginId))
+                .ForMember(dest => dest.OtherOrigins, opt => opt.MapFrom(src => src.OtherOrigins))
+                .ForMember(dest => dest.InsuranceId, opt => opt.MapFrom(src => src.InsuranceId))
+                .ForMember(dest => dest.LetterOfGuarantee, opt => opt.MapFrom(src => src.LetterOfGuarantee))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.TypeOfAttention, opt => opt.MapFrom(src => src.TypeOfAttention))
+                .ForMember(dest => dest.TypeOfPatient, opt => opt.MapFrom(src => src.TypeOfPatient))
+                .ForMember(dest => dest.Referral_doctorsId, opt => opt.MapFrom(src => src.Referral_doctorsId))
+                .ForMember(dest => dest.CenterOfOriginId, opt => opt.MapFrom(src => src.CenterOfOriginId))
+                .ForMember(dest => dest.AnotherCenter, opt => opt.MapFrom(src => src.AnotherCenter))
+                .ForMember(dest => dest.ProcedureRoomId, opt => opt.MapFrom(src => src.ProcedureRoomId))
+                .ForMember(dest => dest.ResourcesId, opt => opt.MapFrom(src => src.ResourcesId))
+                .ForMember(dest => dest.StudiesId, opt => opt.MapFrom(src => src.StudiesId))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateAgendaDto, AgendaEntity>()
+                .ForMember(dest => dest.PacientId, opt => opt.MapFrom(src => src.PacientId))
+                .ForMember(dest => dest.CentroId, opt => opt.MapFrom(src => src.CentroId))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.AppointmentDate, opt => opt.MapFrom(src => src.AppointmentDate))
+                .ForMember(dest => dest.HoursMedicalShedule, opt => opt.MapFrom(src => src.HoursMedicalShedule))
+                .ForMember(dest => dest.TypeofAppointment, opt => opt.MapFrom(src => src.TypeofAppointment))
+                .ForMember(dest => dest.OriginId, opt => opt.MapFrom(src => src.OriginId))
+                .ForMember(dest => dest.OtherOrigins, opt => opt.MapFrom(src => src.OtherOrigins))
+                .ForMember(dest => dest.InsuranceId, opt => opt.MapFrom(src => src.InsuranceId))
+                .ForMember(dest => dest.LetterOfGuarantee, opt => opt.MapFrom(src => src.LetterOfGuarantee))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.TypeOfAttention, opt => opt.MapFrom(src => src.TypeOfAttention))
+                .ForMember(dest => dest.TypeOfPatient, opt => opt.MapFrom(src => src.TypeOfPatient))
+                .ForMember(dest => dest.Referral_doctorsId, opt => opt.MapFrom(src => src.Referral_doctorsId))
+                .ForMember(dest => dest.CenterOfOriginId, opt => opt.MapFrom(src => src.CenterOfOriginId))
+                .ForMember(dest => dest.AnotherCenter, opt => opt.MapFrom(src => src.AnotherCenter))
+                .ForMember(dest => dest.ProcedureRoomId, opt => opt.MapFrom(src => src.ProcedureRoomId))
+                .ForMember(dest => dest.ResourcesId, opt => opt.MapFrom(src => src.ResourcesId))
+                .ForMember(dest => dest.StudiesId, opt => opt.MapFrom(src => src.StudiesId))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateAgendaDto, AgendaEntity>()
+                .ForMember(dest => dest.medicalscheduleid, opt => opt.MapFrom(src => src.medicalscheduleid))
+                .ForMember(dest => dest.PacientId, opt => opt.MapFrom(src => src.PacientId))
+                .ForMember(dest => dest.CentroId, opt => opt.MapFrom(src => src.CentroId))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.AppointmentDate, opt => opt.MapFrom(src => src.AppointmentDate))
+                .ForMember(dest => dest.HoursMedicalShedule, opt => opt.MapFrom(src => src.HoursMedicalShedule))
+                .ForMember(dest => dest.TypeofAppointment, opt => opt.MapFrom(src => src.TypeofAppointment))
+                .ForMember(dest => dest.OriginId, opt => opt.MapFrom(src => src.OriginId))
+                .ForMember(dest => dest.OtherOrigins, opt => opt.MapFrom(src => src.OtherOrigins))
+                .ForMember(dest => dest.InsuranceId, opt => opt.MapFrom(src => src.InsuranceId))
+                .ForMember(dest => dest.LetterOfGuarantee, opt => opt.MapFrom(src => src.LetterOfGuarantee))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.TypeOfAttention, opt => opt.MapFrom(src => src.TypeOfAttention))
+                .ForMember(dest => dest.TypeOfPatient, opt => opt.MapFrom(src => src.TypeOfPatient))
+                .ForMember(dest => dest.Referral_doctorsId, opt => opt.MapFrom(src => src.Referral_doctorsId))
+                .ForMember(dest => dest.CenterOfOriginId, opt => opt.MapFrom(src => src.CenterOfOriginId))
+                .ForMember(dest => dest.AnotherCenter, opt => opt.MapFrom(src => src.AnotherCenter))
+                .ForMember(dest => dest.ProcedureRoomId, opt => opt.MapFrom(src => src.ProcedureRoomId))
+                .ForMember(dest => dest.ResourcesId, opt => opt.MapFrom(src => src.ResourcesId))
+                .ForMember(dest => dest.StudiesId, opt => opt.MapFrom(src => src.StudiesId))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
