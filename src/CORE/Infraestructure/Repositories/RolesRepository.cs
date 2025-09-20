@@ -19,7 +19,7 @@ namespace Infraestructure.Repositories
         public RolesRepository(
             IConfiguration configuration,
             ILogger<RolesRepository> logger,
-            IDapperWrapper dapperWrapper) : base(configuration, logger, "studies")
+            IDapperWrapper dapperWrapper) : base(configuration, logger, "system_users_profile")
         {
             _dapperWrapper = dapperWrapper ?? throw new ArgumentNullException(nameof(dapperWrapper));
         }

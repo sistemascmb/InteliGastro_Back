@@ -6,6 +6,7 @@ using WebApi.Application.DTO.ArchivoDigital;
 using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Estudios;
 using WebApi.Application.DTO.Examenes;
+using WebApi.Application.DTO.MedicoReferencia;
 using WebApi.Application.DTO.Personal;
 using WebApi.Application.DTO.Preparacion;
 using WebApi.Application.DTO.Recursos;
@@ -527,6 +528,51 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.profiletypeid, opt => opt.MapFrom(src => src.profiletypeid))
                 .ForMember(dest => dest.profile_name, opt => opt.MapFrom(src => src.profile_name))
                 .ForMember(dest => dest.description, opt => opt.MapFrom(src => src.description))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //MedicoReferencia
+            CreateMap<MedicoReferenciaEntity, MedicoReferenciaDto>()
+                .ForMember(dest => dest.referraldoctorsd, opt => opt.MapFrom(src => src.referraldoctorsd))
+                .ForMember(dest => dest.Names, opt => opt.MapFrom(src => src.Names))
+                .ForMember(dest => dest.Surnames, opt => opt.MapFrom(src => src.Surnames))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+                .ForMember(dest => dest.Date_of_birth, opt => opt.MapFrom(src => src.Date_of_birth))
+                .ForMember(dest => dest.Profession, opt => opt.MapFrom(src => src.Profession))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateMedicoReferenciaDto, MedicoReferenciaEntity>()
+                .ForMember(dest => dest.Names, opt => opt.MapFrom(src => src.Names))
+                .ForMember(dest => dest.Surnames, opt => opt.MapFrom(src => src.Surnames))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+                .ForMember(dest => dest.Date_of_birth, opt => opt.MapFrom(src => src.Date_of_birth))
+                .ForMember(dest => dest.Profession, opt => opt.MapFrom(src => src.Profession))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateMedicoReferenciaDto, MedicoReferenciaEntity>()
+                .ForMember(dest => dest.referraldoctorsd, opt => opt.MapFrom(src => src.referraldoctorsd))
+                .ForMember(dest => dest.Names, opt => opt.MapFrom(src => src.Names))
+                .ForMember(dest => dest.Surnames, opt => opt.MapFrom(src => src.Surnames))
+                .ForMember(dest => dest.Gender, opt => opt.MapFrom(src => src.Gender))
+                .ForMember(dest => dest.Date_of_birth, opt => opt.MapFrom(src => src.Date_of_birth))
+                .ForMember(dest => dest.Profession, opt => opt.MapFrom(src => src.Profession))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))

@@ -18,7 +18,7 @@ namespace Infraestructure.Repositories
         public SegurosRepository(
             IConfiguration configuration,
             ILogger<SegurosRepository> logger,
-            IDapperWrapper dapperWrapper) : base(configuration, logger, "studies")
+            IDapperWrapper dapperWrapper) : base(configuration, logger, "insurance")
         {
             _dapperWrapper = dapperWrapper ?? throw new ArgumentNullException(nameof(dapperWrapper));
         }
