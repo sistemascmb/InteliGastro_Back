@@ -9,6 +9,7 @@ using WebApi.Application.DTO.Examenes;
 using WebApi.Application.DTO.Macros;
 using WebApi.Application.DTO.MedicoReferencia;
 using WebApi.Application.DTO.Personal;
+using WebApi.Application.DTO.Plantilla;
 using WebApi.Application.DTO.Preparacion;
 using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.Roles;
@@ -613,6 +614,51 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
                 .ForMember(dest => dest.Macro, opt => opt.MapFrom(src => src.Macro))
                 .ForMember(dest => dest.SelectAll, opt => opt.MapFrom(src => src.SelectAll))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //Plantilla
+            CreateMap<PlantillaEntity, PlantillaDto>()
+                .ForMember(dest => dest.templatesid, opt => opt.MapFrom(src => src.templatesid))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.ExamsId, opt => opt.MapFrom(src => src.ExamsId))
+                .ForMember(dest => dest.Plantilla, opt => opt.MapFrom(src => src.Plantilla))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.AllPersonalMed, opt => opt.MapFrom(src => src.AllPersonalMed))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreatePlantillaDto, PlantillaEntity>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.ExamsId, opt => opt.MapFrom(src => src.ExamsId))
+                .ForMember(dest => dest.Plantilla, opt => opt.MapFrom(src => src.Plantilla))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.AllPersonalMed, opt => opt.MapFrom(src => src.AllPersonalMed))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdatePlantillaDto, PlantillaEntity>()
+                .ForMember(dest => dest.templatesid, opt => opt.MapFrom(src => src.templatesid))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.ExamsId, opt => opt.MapFrom(src => src.ExamsId))
+                .ForMember(dest => dest.Plantilla, opt => opt.MapFrom(src => src.Plantilla))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.AllPersonalMed, opt => opt.MapFrom(src => src.AllPersonalMed))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
