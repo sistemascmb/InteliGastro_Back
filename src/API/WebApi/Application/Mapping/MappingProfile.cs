@@ -6,6 +6,7 @@ using WebApi.Application.DTO.ArchivoDigital;
 using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Estudios;
 using WebApi.Application.DTO.Examenes;
+using WebApi.Application.DTO.Macros;
 using WebApi.Application.DTO.MedicoReferencia;
 using WebApi.Application.DTO.Personal;
 using WebApi.Application.DTO.Preparacion;
@@ -573,6 +574,45 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Profession, opt => opt.MapFrom(src => src.Profession))
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
                 .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //Macros
+            CreateMap<MacrosEntity, MacrosDto>()
+                .ForMember(dest => dest.macrosid, opt => opt.MapFrom(src => src.macrosid))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.Macro, opt => opt.MapFrom(src => src.Macro))
+                .ForMember(dest => dest.SelectAll, opt => opt.MapFrom(src => src.SelectAll))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateMacrosDto, MacrosEntity>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.Macro, opt => opt.MapFrom(src => src.Macro))
+                .ForMember(dest => dest.SelectAll, opt => opt.MapFrom(src => src.SelectAll))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateMacrosDto, MacrosEntity>()
+                .ForMember(dest => dest.macrosid, opt => opt.MapFrom(src => src.macrosid))
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.PersonalId, opt => opt.MapFrom(src => src.PersonalId))
+                .ForMember(dest => dest.Macro, opt => opt.MapFrom(src => src.Macro))
+                .ForMember(dest => dest.SelectAll, opt => opt.MapFrom(src => src.SelectAll))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))

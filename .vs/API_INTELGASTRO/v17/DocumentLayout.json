@@ -3,26 +3,6 @@
   "WorkspaceRootPath": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\mediforeferenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\mediforeferenciacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\medicoreferencia\\medicoreferenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\medicoreferencia\\medicoreferenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\models\\medicoreferenciaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\models\\medicoreferenciaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\medicoreferencia\\medicoreferenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\medicoreferencia\\medicoreferenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\estudios\\estudiosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\estudios\\estudiosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,16 +11,32 @@
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\estudioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\medicoreferencia\\imedicoreferenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\medicoreferencia\\imedicoreferenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\macros\\macrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\macros\\macrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\estudios\\estudiosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\estudios\\estudiosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\macros\\macrosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\macros\\macrosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\seguros\\segurosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\seguros\\segurosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\macrosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\macrosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\macros\\imacrosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\macros\\imacrosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\macroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\macros\\updatemacrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\macros\\updatemacrosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,51 +45,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 67,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 54,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EstudiosDto.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Estudios\\EstudiosDto.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Estudios\\EstudiosDto.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Estudios\\EstudiosDto.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Estudios\\EstudiosDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:13:30.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "EstudiosService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Estudios\\EstudiosService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Estudios\\EstudiosService.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Estudios\\EstudiosService.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Estudios\\EstudiosService.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAuwNsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T20:17:51.85Z",
+              "WhenOpened": "2025-09-20T00:13:25.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MedicoReferenciaDto.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\MedicoReferencia\\MedicoReferenciaDto.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\MedicoReferencia\\MedicoReferenciaDto.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\MedicoReferencia\\MedicoReferenciaDto.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\MedicoReferencia\\MedicoReferenciaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:13:21.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "EstudiosController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\EstudiosController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\EstudiosController.cs",
@@ -101,90 +71,104 @@
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\EstudiosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T20:15:08.185Z",
+              "WhenOpened": "2025-09-20T00:06:55.733Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SegurosDto.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Seguros\\SegurosDto.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Seguros\\SegurosDto.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Seguros\\SegurosDto.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Seguros\\SegurosDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MacrosDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Macros\\MacrosDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Macros\\MacrosDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Macros\\MacrosDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Macros\\MacrosDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T20:28:58.423Z"
+              "WhenOpened": "2025-09-20T00:09:05.038Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 49,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 53,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MedicoReferenciaEntity.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\MedicoReferenciaEntity.cs",
-              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\MedicoReferenciaEntity.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\MedicoReferenciaEntity.cs",
-              "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\MedicoReferenciaEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:34:42.717Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAABkCAAAAAAAAAAAswCgCAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAADwCAAAAAAAAAAAswGYCAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:30:48.096Z",
+              "WhenOpened": "2025-09-20T00:22:44.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MedicoReferenciaService.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\MedicoReferenciaService.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\MedicoReferenciaService.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\MedicoReferenciaService.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\MedicoReferenciaService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDEAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "MacrosRepository.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\MacrosRepository.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\MacrosRepository.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\MacrosRepository.cs",
+              "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\MacrosRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:17:07.952Z",
+              "WhenOpened": "2025-09-20T00:16:06.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MacrosService.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Macros\\MacrosService.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Macros\\MacrosService.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Macros\\MacrosService.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Macros\\MacrosService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T00:12:52.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateMacrosDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Macros\\UpdateMacrosDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Macros\\UpdateMacrosDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Macros\\UpdateMacrosDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Macros\\UpdateMacrosDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T00:11:29.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMacrosService.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Macros\\IMacrosService.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Macros\\IMacrosService.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Macros\\IMacrosService.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Macros\\IMacrosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T00:08:18.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IMedicoReferenciaService.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\IMedicoReferenciaService.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\IMedicoReferenciaService.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\IMedicoReferenciaService.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\MedicoReferencia\\IMedicoReferenciaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
+              "Title": "MacrosController.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\MacrosController.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\MacrosController.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\MacrosController.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Controllers\\MacrosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:12:33.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MedifoReferenciaController.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\MedifoReferenciaController.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\MedifoReferenciaController.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\MedifoReferenciaController.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Controllers\\MedifoReferenciaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T23:10:41.223Z",
+              "WhenOpened": "2025-09-20T00:07:09.088Z",
               "EditorCaption": ""
             }
           ]

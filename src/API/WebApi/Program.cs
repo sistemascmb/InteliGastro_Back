@@ -14,6 +14,7 @@ using WebApi.Application.Services;
 using WebApi.Application.Services.Centro;
 using WebApi.Application.Services.Estudios;
 using WebApi.Application.Services.Examenes;
+using WebApi.Application.Services.Macros;
 using WebApi.Application.Services.MedicoReferencia;
 using WebApi.Application.Services.Personal;
 using WebApi.Application.Services.Preparacion;
@@ -77,6 +78,8 @@ builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 builder.Services.AddScoped<IRolesService, RolesService>();
 builder.Services.AddScoped<IMedicoReferenciaRepository, MedicoReferenciaRepository>();
 builder.Services.AddScoped<IMedicoReferenciaService, MedicoReferenciaService>();
+builder.Services.AddScoped<IMacrosRepository, MacrosRepository>();
+builder.Services.AddScoped<IMacrosService, MacrosService>();
 
 var app = builder.Build();
 
