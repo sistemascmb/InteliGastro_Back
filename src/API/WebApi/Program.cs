@@ -13,6 +13,7 @@ using WebApi.Application.Mapping;
 using WebApi.Application.Services;
 using WebApi.Application.Services.Agenda;
 using WebApi.Application.Services.Centro;
+using WebApi.Application.Services.Cie10;
 using WebApi.Application.Services.Estudios;
 using WebApi.Application.Services.Examenes;
 using WebApi.Application.Services.Macros;
@@ -92,6 +93,8 @@ builder.Services.AddScoped<IAgendaRepository, AgendaRepository>();
 builder.Services.AddScoped<IAgendaService, AgendaService>();
 builder.Services.AddScoped<ISuministrosRepository, SuministrosRepository>();
 builder.Services.AddScoped<ISuministrosService, SuministrosService>();
+builder.Services.AddScoped<ICie10Repository, Cie10Repository>();
+builder.Services.AddScoped<ICie10Service, Cie10Service>();
 
 var app = builder.Build();
 
