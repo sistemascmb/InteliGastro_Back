@@ -25,6 +25,7 @@ using WebApi.Application.Services.Recursos;
 using WebApi.Application.Services.Roles;
 using WebApi.Application.Services.Salas;
 using WebApi.Application.Services.Seguros;
+using WebApi.Application.Services.Suministros;
 using WebApi.Application.Services.SystemUsersService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -89,6 +90,8 @@ builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
 builder.Services.AddScoped<IPacienteService, PacienteService>();
 builder.Services.AddScoped<IAgendaRepository, AgendaRepository>();
 builder.Services.AddScoped<IAgendaService, AgendaService>();
+builder.Services.AddScoped<ISuministrosRepository, SuministrosRepository>();
+builder.Services.AddScoped<ISuministrosService, SuministrosService>();
 
 var app = builder.Build();
 
