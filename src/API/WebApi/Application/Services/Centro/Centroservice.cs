@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
 using Domain.DomainInterfaces;
 using Infraestructure.Models;
+using Infraestructure.Repositories;
 using WebApi.Application.DTO.Centro;
+using WebApi.Application.DTO.Preparacion;
 
 namespace WebApi.Application.Services.Centro
 {
@@ -157,6 +159,52 @@ namespace WebApi.Application.Services.Centro
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al actualizar el Centro con ID: {CentroId}", updateCentroDto.centroid);
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<CentroDto>> GetAllCentroAsync()
+        {
+            Task<IEnumerable<CentroDto>> preparacionDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtenciòn de todos los Centros");
+                var centro = _centroRepository.GetAllCentro().Result;
+                var centroList = centro.Where(e => !((CentroEntity)e).IsDeleted).ToList();
+                preparacionDto = Task.FromResult(_mapper.Map<IEnumerable<CentroDto>>(centroList));
+                _logger.LogInformation("Centro obtenidos: {Count}", centroList.Count());
+                return await preparacionDto;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener todos los preparacion");
+                throw;
+            }
+        }
+
+        public Task<IEnumerable<CentroDto>> GetWhereAsync(string condicion)
+        {
+            CentroDto[] centroDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtenciòn de preparacion con condición: {condicion}", condicion);
+                var preparacion = _centroRepository.GetAllCentro().Result;
+                var preparacionList = preparacion.Where(e => !((CentroEntity)e).IsDeleted).ToList();
+                if (!string.IsNullOrWhiteSpace(condicion))
+                {
+                    preparacionList = preparacionList.Where(e =>
+                    {
+                        var entity = (CentroEntity)e;
+                        return (entity.Nombre != null && entity.Nombre.Contains(condicion, StringComparison.OrdinalIgnoreCase));
+                    }).ToList();
+                }
+                centroDto = _mapper.Map<CentroDto[]>(preparacionList);
+                _logger.LogInformation("Centros obtenidos con condición: {Count}", centroDto.Length);
+                return Task.FromResult<IEnumerable<CentroDto>>(centroDto);
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Error al obtener los Centros con condición: {condicion}", condicion);
                 throw;
             }
         }

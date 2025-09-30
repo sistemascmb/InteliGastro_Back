@@ -16,5 +16,8 @@ namespace Domain.DomainInterfaces
         Task<IEnumerable<object>> GetSystemUsersWhereAsync(string whereClause, object? parameters = null);
         Task<dynamic?> GetSystemUsersCompletaAsync(long UserId);
         Task<bool> ExistsAsync(int id);
+
+        Task<IEnumerable<object>> GetAllSystemUsersAsync();
+
     }
 }

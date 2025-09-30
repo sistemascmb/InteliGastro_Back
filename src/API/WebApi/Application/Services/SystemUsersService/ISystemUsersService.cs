@@ -1,4 +1,5 @@
-﻿using WebApi.Application.DTO.SystemUsers;
+﻿using WebApi.Application.DTO.Recursos;
+using WebApi.Application.DTO.SystemUsers;
 
 namespace WebApi.Application.Services.SystemUsersService
 {
@@ -9,5 +10,8 @@ namespace WebApi.Application.Services.SystemUsersService
         Task<SystemUsersDto> UpdateSystemUsersAsync(UpdateSystemUsersDto updateSystemUsersDto);
         Task<bool> DeleteSystemUsersAsync(long personaId, string eliminadoPor);
         Task<SystemUsersDto> GetSystemUsersCompletaAsync(long UserId);
+
+        Task<IEnumerable<SystemUsersDto>> GetWhereAsync(string condicion);
+        Task<IEnumerable<SystemUsersDto>> GetAllSystemUsersAsync();
     }
 }

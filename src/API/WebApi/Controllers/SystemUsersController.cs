@@ -77,5 +77,27 @@ namespace WebApi.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(object), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetWhere([FromQuery] string condicion)
+        {
+            _logger.LogInformation("Iniciando endpoint GetWhere con condición: {Condicion} [CRUD AUTOMÁTICO]", condicion);
+            var result = await _systemUsers.GetWhereAsync(condicion);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(object), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetAllSystemUsers()
+        {
+            _logger.LogInformation("Iniciando endpoint GetAllSystemUsers [CRUD AUTOMÁTICO]");
+            var result = await _systemUsers.GetAllSystemUsersAsync();
+            return Ok(result);
+        }
     }
 }

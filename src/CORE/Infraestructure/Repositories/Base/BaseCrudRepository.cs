@@ -1,9 +1,10 @@
 using Dapper;
 using Dapper.Contrib.Extensions;
-using Npgsql;
+using Infraestructure.Helpers;
+using Infraestructure.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Infraestructure.Helpers;
+using Npgsql;
 
 namespace Infraestructure.Repositories.Base
 {
@@ -427,6 +428,8 @@ namespace Infraestructure.Repositories.Base
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
 

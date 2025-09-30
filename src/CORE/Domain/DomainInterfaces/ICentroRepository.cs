@@ -11,8 +11,10 @@ namespace Domain.DomainInterfaces
         Task<long> CreateCentroAsync(object centroData);
         Task<object?> GetCentroByIdAsync(long centroId);
         Task<bool> UpdateCentroAsync(object centroData);
+        Task<IEnumerable<object>> GetAllCentro();
+
         //Task<bool> DeleteCentroAsync(long centroId);
         //Task<bool> ExistsCentroAsync(long centroId);
-        
+
     }
 }

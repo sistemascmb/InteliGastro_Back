@@ -40,6 +40,10 @@ NpgsqlConnection.GlobalTypeMapper.EnableDynamicJson();
 // Configurar mapeo de columnas para Dapper
 SqlMapper.Settings.CommandTimeout = 30;
 
+// Registrar TypeHandlers personalizados para manejar conversiones seguras
+SqlMapper.AddTypeHandler(typeof(DateTimeOffset), new Infraestructure.TypeHandlers.SafeDateTimeOffsetTypeHandler());
+SqlMapper.AddTypeHandler(typeof(DateTimeOffset?), new Infraestructure.TypeHandlers.SafeNullableDateTimeOffsetTypeHandler());
+
 
 // Add services to the container.
 

@@ -72,5 +72,27 @@ namespace WebApi.Controllers
             var result = await _centroService.DeleteCentroAsync(id, eliminadoPor);
             return Ok(result);
         }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetAllCentro()
+        {
+            _logger.LogInformation("Iniciando endpoint GetAllCentro [CRUD AUTOMÁTICO]");
+            var result = await _centroService.GetAllCentroAsync();
+            return Ok(result);
+        }
+
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetWhere([FromQuery] string condicion)
+        {
+            _logger.LogInformation("Iniciando endpoint GetWhere con condición: {Condicion} [CRUD AUTOMÁTICO]", condicion);
+            var result = await _centroService.GetWhereAsync(condicion);
+            return Ok(result);
+        }
     }
 }

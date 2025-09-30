@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Domain.DomainInterfaces;
 using Infraestructure.Models;
+using Infraestructure.Repositories;
+using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.SystemUsers;
 
 namespace WebApi.Application.Services.SystemUsersService
@@ -199,6 +201,53 @@ namespace WebApi.Application.Services.SystemUsersService
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al actualizar SystemUsers ID: {UserId}", updateSystemUsersDto.UserId);
+                throw;
+            }
+        }
+
+        public Task<IEnumerable<SystemUsersDto>> GetWhereAsync(string condicion)
+        {
+            SystemUsersDto[] systemUsersDtos;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de recursos con condición: {condicion}", condicion);
+                var systemUsers = _systemUsersRepository.GetAllSystemUsersAsync().Result;
+                var systemUsersList = systemUsers.Where(s => !((SystemUsersEntity)s).IsDeleted).ToList();
+                if (!string.IsNullOrWhiteSpace(condicion))
+                {
+                    systemUsersList = systemUsersList.Where(s =>
+                    {
+                        var entity = (SystemUsersEntity)s;
+                        return (entity.FirstName != null && entity.FirstName.Contains(condicion, StringComparison.OrdinalIgnoreCase)) ||
+                        (entity.LastName != null && entity.LastName.Contains(condicion, StringComparison.OrdinalIgnoreCase));
+                    }).ToList();
+                }
+                systemUsersDtos = _mapper.Map<SystemUsersDto[]>(systemUsersList);
+                _logger.LogInformation("Recursos recuperados con condición: {Count}", systemUsersDtos.Length);
+                return Task.FromResult((IEnumerable<SystemUsersDto>)systemUsersDtos);
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Error al recuperar los recursos con condición: {Condicion}", condicion);
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<SystemUsersDto>> GetAllSystemUsersAsync()
+        {
+            Task<IEnumerable<SystemUsersDto>> systemUsersDtos;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de todos los SystemUsers.");
+                var systemUsers = await _systemUsersRepository.GetAllSystemUsersAsync();
+                var systemUsersList = systemUsers.Where(s => !((SystemUsersEntity)s).IsDeleted).ToList();
+                systemUsersDtos = Task.FromResult(_mapper.Map<IEnumerable<SystemUsersDto>>(systemUsersList));
+                _logger.LogInformation("SystemUsers obtenidos: {Count}", systemUsersList.Count);
+                return await systemUsersDtos;
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Error al obtener los SystemUsers.");
                 throw;
             }
         }

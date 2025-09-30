@@ -62,6 +62,12 @@ namespace Infraestructure.Repositories
             return UpdateAsync(systemUsersEntity);
         }
 
+        public Task<IEnumerable<object>> GetAllSystemUsersAsync()
+        {
+            Task<IEnumerable<SystemUsersEntity>> SystemUsers = GetAllAsync();
+            return SystemUsers.ContinueWith(t => t.Result.Cast<object>());
+        }
+
         // ===== MÉTODOS AUXILIARES =====
         //METODO: Implementar AutoMapper o similar para mapeo automático
         private SystemUsersEntity ConvertToSystemUsersEntity(object data)
