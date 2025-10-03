@@ -53,7 +53,31 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers();
+
+// Configuración de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+    
+    // Política más restrictiva para producción (opcional)
+    options.AddPolicy("RestrictedCors", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000", 
+            "http://localhost:4200",
+            "http://26.70.216.19:3000",
+            "http://26.101.181.208:3000",
+            "http://26.41.173.127:3000",
+            "https://yourdomain.com")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
 //builder.Services.AddAutoMapper(typeof(Program).mapp);
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
@@ -122,6 +146,9 @@ if (app.Environment.IsDevelopment())
 
 // Agregar middleware de manejo de errores globales
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+
+// Configurar CORS - debe ir antes de UseAuthorization
+app.UseCors("AllowAllOrigins");
 
 app.UseHttpsRedirection();
 
