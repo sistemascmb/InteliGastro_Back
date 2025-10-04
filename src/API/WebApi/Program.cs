@@ -27,6 +27,7 @@ using WebApi.Application.Services.Roles;
 using WebApi.Application.Services.Salas;
 using WebApi.Application.Services.Seguros;
 using WebApi.Application.Services.Suministros;
+using WebApi.Application.Services.SystemParameter;
 using WebApi.Application.Services.SystemUsersService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -123,6 +124,8 @@ builder.Services.AddScoped<ISuministrosRepository, SuministrosRepository>();
 builder.Services.AddScoped<ISuministrosService, SuministrosService>();
 builder.Services.AddScoped<ICie10Repository, Cie10Repository>();
 builder.Services.AddScoped<ICie10Service, Cie10Service>();
+builder.Services.AddScoped<ISystemParameterRepository, SystemParameterRepository>();
+builder.Services.AddScoped<ISystemParameterService, SystemParameterService>();
 
 var app = builder.Build();
 

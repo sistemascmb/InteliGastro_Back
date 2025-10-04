@@ -19,6 +19,7 @@ using WebApi.Application.DTO.Roles;
 using WebApi.Application.DTO.Salas;
 using WebApi.Application.DTO.Seguros;
 using WebApi.Application.DTO.Suministros;
+using WebApi.Application.DTO.SystemParameter;
 using WebApi.Application.DTO.SystemUsers;
 
 namespace WebApi.Application.Mapping
@@ -902,6 +903,53 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
                 .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //SystemParameter
+            CreateMap<SystemParameterEntity, SystemParameterDto>()
+                .ForMember(dest => dest.parameterid, opt => opt.MapFrom(src => src.parameterid))
+                .ForMember(dest => dest.groupid, opt => opt.MapFrom(src => src.groupid))
+                .ForMember(dest => dest.Value1, opt => opt.MapFrom(src => src.Value1))
+                .ForMember(dest => dest.Value2, opt => opt.MapFrom(src => src.Value2))
+                .ForMember(dest => dest.ParentParameterId, opt => opt.MapFrom(src => src.ParentParameterId))
+                .ForMember(dest => dest.Sort, opt => opt.MapFrom(src => src.Sort))
+                .ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
+                .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateSystemParameterDto, SystemParameterEntity>()
+                .ForMember(dest => dest.parameterid, opt => opt.MapFrom(src => src.parameterid))
+                .ForMember(dest => dest.groupid, opt => opt.MapFrom(src => src.groupid))
+                .ForMember(dest => dest.Value1, opt => opt.MapFrom(src => src.Value1))
+                .ForMember(dest => dest.Value2, opt => opt.MapFrom(src => src.Value2))
+                .ForMember(dest => dest.ParentParameterId, opt => opt.MapFrom(src => src.ParentParameterId))
+                .ForMember(dest => dest.Sort, opt => opt.MapFrom(src => src.Sort))
+                .ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
+                .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateSystemParameterDto, SystemParameterEntity>()
+                .ForMember(dest => dest.parameterid, opt => opt.MapFrom(src => src.parameterid))
+                .ForMember(dest => dest.groupid, opt => opt.MapFrom(src => src.groupid))
+                .ForMember(dest => dest.Value1, opt => opt.MapFrom(src => src.Value1))
+                .ForMember(dest => dest.Value2, opt => opt.MapFrom(src => src.Value2))
+                .ForMember(dest => dest.ParentParameterId, opt => opt.MapFrom(src => src.ParentParameterId))
+                .ForMember(dest => dest.Sort, opt => opt.MapFrom(src => src.Sort))
+                .ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
+                .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
 
             //CreateMap<ServerFilterRequestDto, ServerFilter>();
         }
