@@ -92,5 +92,38 @@ namespace WebApi.Controllers
             var result = await _SystemParameterService.GetWhereAsync(condicion);
             return Ok(result);
         }
+
+        [HttpGet("group/{groupId}")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetSystemUsersbyGroupId(int groupId)
+        {
+            _logger.LogInformation("Iniciando endpoint GetSystemUsersbyGroupId");
+            var result = await _SystemParameterService.GetSystemUsersbyGroupId(groupId);
+            return Ok(result);
+        }
+
+        [HttpGet("group/{groupId}/rest")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetSystemUsersbyGroupIdRest(int groupId)
+        {
+            _logger.LogInformation("Iniciando endpoint GetSystemUsersbyGroupIdRest");
+            var result = await _SystemParameterService.GetSystemUsersbyGroupIdRest(groupId);
+            return Ok(result);
+        }
+
+        [HttpGet("group/{groupId}/parent/{parentId}")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> GetSystemUsersbyGroupIdParentId(int groupId, int parentId)
+        {
+            _logger.LogInformation("Iniciando endpoint GetSystemUsersbyGroupIdParentId");
+            var result = await _SystemParameterService.GetSystemUsersbyGroupIdParentId(groupId, parentId);
+            return Ok(result);
+        }
     }
 }

@@ -134,6 +134,70 @@ namespace WebApi.Application.Services.SystemParameter
             }
         }
 
+        public Task<IEnumerable<SystemParameterDto>> GetSystemUsersbyGroupId(int groupId)
+        {
+            SystemParameterDto[] SystemParameterDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de SystemParameter por GroupId: {groupId}", groupId);
+                var SystemParameter = _SystemParameterRepository.GetAllSystemParameterAsync().Result;
+                var SystemParameterList = SystemParameter.Where(e => !((SystemParameterEntity)e).IsDeleted && ((SystemParameterEntity)e).groupid == groupId).ToList();
+                
+                SystemParameterDto = _mapper.Map<SystemParameterDto[]>(SystemParameterList);
+                _logger.LogInformation("SystemParameter obtenidos por GroupId {groupId}: {Count}", groupId, SystemParameterDto.Length);
+                return Task.FromResult<IEnumerable<SystemParameterDto>>(SystemParameterDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener los SystemParameter por GroupId: {groupId}", groupId);
+                throw;
+            }
+        }
+
+        public Task<IEnumerable<SystemParameterDto>> GetSystemUsersbyGroupIdRest(int groupId)
+        {
+            SystemParameterDto[] SystemParameterDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de SystemParameter por GroupId: {groupId}", groupId);
+                var SystemParameter = _SystemParameterRepository.GetAllSystemParameterAsync().Result;
+                var SystemParameterList = SystemParameter.Where(e => !((SystemParameterEntity)e).IsDeleted 
+                                                                   && ((SystemParameterEntity)e).groupid == groupId
+                                                                   && ((SystemParameterEntity)e).ParentParameterId == -1).ToList();
+
+                SystemParameterDto = _mapper.Map<SystemParameterDto[]>(SystemParameterList);
+                _logger.LogInformation("SystemParameter obtenidos por GroupId {groupId}: {Count}", groupId, SystemParameterDto.Length);
+                return Task.FromResult<IEnumerable<SystemParameterDto>>(SystemParameterDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener los SystemParameter por GroupId: {groupId}", groupId);
+                throw;
+            }
+        }
+
+        public Task<IEnumerable<SystemParameterDto>> GetSystemUsersbyGroupIdParentId(int groupId, int parentId)
+        {
+            SystemParameterDto[] SystemParameterDto;
+            try
+            {
+                _logger.LogInformation("Iniciando obtención de SystemParameter por GroupId: {groupId}", groupId);
+                var SystemParameter = _SystemParameterRepository.GetAllSystemParameterAsync().Result;
+                var SystemParameterList = SystemParameter.Where(e => !((SystemParameterEntity)e).IsDeleted
+                                                                   && ((SystemParameterEntity)e).groupid == groupId
+                                                                   && ((SystemParameterEntity)e).ParentParameterId == parentId).ToList();
+
+                SystemParameterDto = _mapper.Map<SystemParameterDto[]>(SystemParameterList);
+                _logger.LogInformation("SystemParameter obtenidos por GroupId {groupId}: {Count}", groupId, SystemParameterDto.Length);
+                return Task.FromResult<IEnumerable<SystemParameterDto>>(SystemParameterDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener los SystemParameter por GroupId: {groupId}", groupId);
+                throw;
+            }
+        }
+
         public Task<IEnumerable<SystemParameterDto>> GetWhereAsync(string condicion)
         {
             SystemParameterDto[] SystemParameterDto;

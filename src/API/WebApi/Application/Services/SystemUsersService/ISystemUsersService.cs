@@ -13,5 +13,7 @@ namespace WebApi.Application.Services.SystemUsersService
 
         Task<IEnumerable<SystemUsersDto>> GetWhereAsync(string condicion);
         Task<IEnumerable<SystemUsersDto>> GetAllSystemUsersAsync();
+
+
     }
 }
