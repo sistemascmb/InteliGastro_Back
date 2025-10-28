@@ -31,7 +31,7 @@ namespace WebApi.Application.Services.MedicoReferencia
                 
                 var MedicoReferenciaEntity = _mapper.Map<MedicoReferenciaEntity>(createMedicoReferenciaDto);
                 MedicoReferenciaEntity.IsDeleted = false;
-                MedicoReferenciaEntity.CreatedAt = DateTime.UtcNow;
+                MedicoReferenciaEntity.CreatedAt = DateTime.Now;
                 var newMedicoReferenciaId = await _medicoReferenciaRepository.CreateMedicoReferenciaAsync(MedicoReferenciaEntity);
                 _logger.LogInformation("MedicoReferencia creado con ID: {MedicoReferenciaId}", newMedicoReferenciaId);
                 var newMedicoReferencia = await _medicoReferenciaRepository.GetMedicoReferenciaByIdAsync(newMedicoReferenciaId);
@@ -71,7 +71,7 @@ namespace WebApi.Application.Services.MedicoReferencia
                     throw new InvalidOperationException($"No se puede eliminar el MedicoReferencia con ID: {MedicoReferenciaId} por que ya está eiminado lógicamente.");
                 }
                 MedicoReferenciaExistente.IsDeleted = true;
-                MedicoReferenciaExistente.UpdatedAt = DateTime.UtcNow;
+                MedicoReferenciaExistente.UpdatedAt = DateTime.Now;
                 MedicoReferenciaExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _medicoReferenciaRepository.UpdateMedicoReferenciaAsync(MedicoReferenciaExistente);
@@ -191,6 +191,9 @@ namespace WebApi.Application.Services.MedicoReferencia
                 MedicoReferenciaToUpdate.CreatedAt = MedicoReferenciaExistente.CreatedAt;
                 MedicoReferenciaToUpdate.CreatedBy = MedicoReferenciaExistente.CreatedBy;
                 MedicoReferenciaToUpdate.IsDeleted = false;
+                MedicoReferenciaToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _medicoReferenciaRepository.UpdateMedicoReferenciaAsync(MedicoReferenciaToUpdate);
                 if (!result)
                 {

@@ -59,7 +59,7 @@ namespace WebApi.Application.Services.Agenda
 
                 var AgendaEntity = _mapper.Map<AgendaEntity>(createAgendaDto);
                 AgendaEntity.IsDeleted = false;
-                AgendaEntity.CreatedAt = DateTime.UtcNow;
+                AgendaEntity.CreatedAt = DateTime.Now;
                 var newAgendaId = await _AgendaRepository.CreateAgendaAsync(AgendaEntity);
                 _logger.LogInformation("Agenda creado con ID: {AgendaId}", newAgendaId);
                 var newAgenda = await _AgendaRepository.GetAgendaByIdAsync(newAgendaId);
@@ -99,7 +99,7 @@ namespace WebApi.Application.Services.Agenda
                     throw new InvalidOperationException($"No se puede eliminar el Estudio con ID: {AgendaId} por que ya está eiminado lógicamente.");
                 }
                 AgendaExistente.IsDeleted = true;
-                AgendaExistente.UpdatedAt = DateTime.UtcNow;
+                AgendaExistente.UpdatedAt = DateTime.Now;
                 AgendaExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _AgendaRepository.UpdateAgendaAsync(AgendaExistente);
@@ -235,6 +235,8 @@ namespace WebApi.Application.Services.Agenda
                 AgendaToUpdate.CreatedAt = AgendaExistente.CreatedAt;
                 AgendaToUpdate.CreatedBy = AgendaExistente.CreatedBy;
                 AgendaToUpdate.IsDeleted = false;
+                AgendaToUpdate.UpdatedAt = DateTime.Now;
+
                 var result = await _AgendaRepository.UpdateAgendaAsync(AgendaToUpdate);
                 if (!result)
                 {

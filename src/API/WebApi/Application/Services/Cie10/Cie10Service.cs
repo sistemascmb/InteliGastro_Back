@@ -30,7 +30,7 @@ namespace WebApi.Application.Services.Cie10
                 
                 var Cie10Entity = _mapper.Map<Cie10Entity>(createCie10Dto);
                 Cie10Entity.IsDeleted = false;
-                Cie10Entity.CreatedAt = DateTime.UtcNow;
+                Cie10Entity.CreatedAt = DateTime.Now;
                 var newCie10Id = await _cie10Repository.CreateCie10Async(Cie10Entity);
                 _logger.LogInformation("Cie10 creado con ID: {Cie10Id}", newCie10Id);
                 var newCie10 = await _cie10Repository.GetCie10ByIdAsync(newCie10Id);
@@ -70,7 +70,7 @@ namespace WebApi.Application.Services.Cie10
                     throw new InvalidOperationException($"No se puede eliminar el Cie10 con ID: {Cie10Id} por que ya está eiminado lógicamente.");
                 }
                 Cie10Existente.IsDeleted = true;
-                Cie10Existente.UpdatedAt = DateTime.UtcNow;
+                Cie10Existente.UpdatedAt = DateTime.Now;
                 Cie10Existente.UpdatedBy = eliminadoPor;
 
                 var result = await _cie10Repository.UpdateCie10Async(Cie10Existente);
@@ -190,6 +190,8 @@ namespace WebApi.Application.Services.Cie10
                 Cie10ToUpdate.CreatedAt = Cie10Existente.CreatedAt;
                 Cie10ToUpdate.CreatedBy = Cie10Existente.CreatedBy;
                 Cie10ToUpdate.IsDeleted = false;
+                Cie10ToUpdate.UpdatedAt = DateTime.Now;
+
                 var result = await _cie10Repository.UpdateCie10Async(Cie10ToUpdate);
                 if (!result)
                 {

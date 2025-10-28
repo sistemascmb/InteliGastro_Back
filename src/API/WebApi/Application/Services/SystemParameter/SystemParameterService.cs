@@ -29,7 +29,7 @@ namespace WebApi.Application.Services.SystemParameter
 
                 var SystemParameterEntity = _mapper.Map<SystemParameterEntity>(createSystemParameterDto);
                 SystemParameterEntity.IsDeleted = false;
-                SystemParameterEntity.CreatedAt = DateTime.UtcNow;
+                SystemParameterEntity.CreatedAt = DateTime.Now;
                 var newSystemParameterId = await _SystemParameterRepository.CreateSystemParameterAsync(SystemParameterEntity);
                 _logger.LogInformation("SystemParameter creado con ID: {SystemParameterId}", newSystemParameterId);
                 //var newSystemParameter = await _SystemParameterRepository.GetSystemParameterByIdAsync(newSystemParameterId);
@@ -66,7 +66,7 @@ namespace WebApi.Application.Services.SystemParameter
                     throw new InvalidOperationException($"No se puede eliminar el SystemParameter con ID: {SystemParameterId} por que ya está eiminado lógicamente.");
                 }
                 SystemParameterExistente.IsDeleted = true;
-                SystemParameterExistente.UpdatedAt = DateTime.UtcNow;
+                SystemParameterExistente.UpdatedAt = DateTime.Now;
                 SystemParameterExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _SystemParameterRepository.UpdateSystemParameterAsync(SystemParameterExistente);
@@ -249,7 +249,9 @@ namespace WebApi.Application.Services.SystemParameter
                 SystemParameterToUpdate.CreatedAt = SystemParameterExistente.CreatedAt;
                 SystemParameterToUpdate.CreatedBy = SystemParameterExistente.CreatedBy;
                 SystemParameterToUpdate.IsDeleted = false;
-                var result = await _SystemParameterRepository.UpdateSystemParameterAsync(SystemParameterToUpdate);
+				SystemParameterToUpdate.UpdatedAt = DateTime.Now;
+
+				var result = await _SystemParameterRepository.UpdateSystemParameterAsync(SystemParameterToUpdate);
                 if (!result)
                 {
                     throw new InvalidOperationException($"No se pudo actualizar el SystemParameter con ID: {updateSystemParameterDto.parameterid}");

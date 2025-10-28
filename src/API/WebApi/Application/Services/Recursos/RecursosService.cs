@@ -45,7 +45,7 @@ namespace WebApi.Application.Services.Recursos
 
                 var recursosEntity = _mapper.Map<RecursosEntity>(createRecursosDto);    
                 recursosEntity.IsDeleted = false; // Asegurar que el nuevo recurso no esté marcado como eliminado
-                recursosEntity.CreatedAt = DateTime.UtcNow; // Establecer la fecha de creación
+                recursosEntity.CreatedAt = DateTime.Now; // Establecer la fecha de creación
 
                 var newId = await _recursosRepository.CreateRecursosAsync(recursosEntity);
                 _logger.LogInformation("Recurso creado con ID: {NewId}", newId);
@@ -91,7 +91,7 @@ namespace WebApi.Application.Services.Recursos
                 }
 
                 recursosExistentes.IsDeleted = true;
-                recursosExistentes.UpdatedAt = DateTime.UtcNow;
+                recursosExistentes.UpdatedAt = DateTime.Now;
                 recursosExistentes.UpdatedBy = eliminadoPor;
 
                 var result = await _recursosRepository.UpdateRecursosAsync(recursosExistentes);
@@ -230,6 +230,7 @@ namespace WebApi.Application.Services.Recursos
                 recursoToUpdate.CreatedAt = recursoExistente.CreatedAt;
                 recursoToUpdate.CreatedBy = recursoExistente.CreatedBy;
                 recursoToUpdate.IsDeleted = false;
+                recursoToUpdate.UpdatedAt = DateTime.Now;
 
                 var result = await _recursosRepository.UpdateRecursosAsync(recursoToUpdate);
 

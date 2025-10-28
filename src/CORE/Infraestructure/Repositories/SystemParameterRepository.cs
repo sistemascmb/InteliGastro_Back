@@ -36,7 +36,7 @@ namespace Infraestructure.Repositories
             var SystemParameterEntity = (SystemParameterEntity)SystemParameter;
             SystemParameterEntity.IsDeleted = true;
             SystemParameterEntity.UpdatedBy = eliminadoPor;
-            SystemParameterEntity.UpdatedAt = DateTime.UtcNow;
+            SystemParameterEntity.UpdatedAt = DateTime.Now;
 
             return await UpdateAsync(SystemParameterEntity);
         }

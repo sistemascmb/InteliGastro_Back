@@ -94,6 +94,6 @@ namespace API_CMB.src.API.WebApi.Middleware
         public int StatusCode { get; set; }
         public string Message { get; set; } = string.Empty;
         public string Details { get; set; } = string.Empty;
-        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+        public DateTime Timestamp { get; set; } = DateTime.Now;
     }
 }

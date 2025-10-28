@@ -25,7 +25,7 @@ namespace WebApi.Application.Services.Centro
                 _logger.LogInformation("Iniciando creación de Centro [CRUD AUTOMÀTICO]");
                 var centroEntity = _mapper.Map<Infraestructure.Models.CentroEntity>(createCentroDto);
                 centroEntity.IsDeleted = false;
-                centroEntity.CreatedAt = DateTime.UtcNow;
+                centroEntity.CreatedAt = DateTime.Now;
 
                 var centroId = await _centroRepository.CreateCentroAsync(centroEntity);
                 _logger.LogInformation("Centro creado exitosamente con ID: {CentroId}", centroId);
@@ -67,7 +67,7 @@ namespace WebApi.Application.Services.Centro
                 }
 
                 centroExistente.IsDeleted = true;
-                centroExistente.UpdatedAt = DateTime.UtcNow;
+                centroExistente.UpdatedAt = DateTime.Now;
                 centroExistente.UpdatedBy = eliminadoPor;
                 var result = await _centroRepository.UpdateCentroAsync(centroExistente);
                 if (!result)
@@ -139,6 +139,7 @@ namespace WebApi.Application.Services.Centro
                 centroEntity.CreatedAt = centroExistente.CreatedAt;
                 centroEntity.CreatedBy = centroExistente.CreatedBy;
                 centroEntity.IsDeleted = false;
+                centroEntity.UpdatedAt = DateTime.Now;
 
                 var result = await _centroRepository.UpdateCentroAsync(centroEntity);
 

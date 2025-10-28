@@ -35,7 +35,7 @@ namespace WebApi.Application.Services.Macros
                 
                 var MacrosEntity = _mapper.Map<MacrosEntity>(createMacrosDto);
                 MacrosEntity.IsDeleted = false;
-                MacrosEntity.CreatedAt = DateTime.UtcNow;
+                MacrosEntity.CreatedAt = DateTime.Now;
                 var newMacrosId = await _macrosRepository.CreateMacrosAsync(MacrosEntity);
                 _logger.LogInformation("Macros creado con ID: {MacrosId}", newMacrosId);
                 var newMacros = await _macrosRepository.GetMacrosByIdAsync(newMacrosId);
@@ -75,7 +75,7 @@ namespace WebApi.Application.Services.Macros
                     throw new InvalidOperationException($"No se puede eliminar el Macros con ID: {MacrosId} por que ya está eiminado lógicamente.");
                 }
                 MacrosExistente.IsDeleted = true;
-                MacrosExistente.UpdatedAt = DateTime.UtcNow;
+                MacrosExistente.UpdatedAt = DateTime.Now;
                 MacrosExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _macrosRepository.UpdateMacrosAsync(MacrosExistente);
@@ -195,6 +195,9 @@ namespace WebApi.Application.Services.Macros
                 MacrosToUpdate.CreatedAt = MacrosExistente.CreatedAt;
                 MacrosToUpdate.CreatedBy = MacrosExistente.CreatedBy;
                 MacrosToUpdate.IsDeleted = false;
+                MacrosToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _macrosRepository.UpdateMacrosAsync(MacrosToUpdate);
                 if (!result)
                 {

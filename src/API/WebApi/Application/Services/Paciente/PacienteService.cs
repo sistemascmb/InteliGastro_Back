@@ -30,7 +30,7 @@ namespace WebApi.Application.Services.Paciente
                 
                 var PacienteEntity = _mapper.Map<PacienteEntity>(createPacienteDto);
                 PacienteEntity.IsDeleted = false;
-                PacienteEntity.CreatedAt = DateTime.UtcNow;
+                PacienteEntity.CreatedAt = DateTime.Now;
                 var newPacienteId = await _pacienteRepository.CreatePacienteAsync(PacienteEntity);
                 _logger.LogInformation("Paciente creado con ID: {PacienteId}", newPacienteId);
                 var newPaciente = await _pacienteRepository.GetPacienteByIdAsync(newPacienteId);
@@ -70,7 +70,7 @@ namespace WebApi.Application.Services.Paciente
                     throw new InvalidOperationException($"No se puede eliminar el Paciente con ID: {PacienteId} por que ya está eiminado lógicamente.");
                 }
                 PacienteExistente.IsDeleted = true;
-                PacienteExistente.UpdatedAt = DateTime.UtcNow;
+                PacienteExistente.UpdatedAt = DateTime.Now;
                 PacienteExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _pacienteRepository.UpdatePacienteAsync(PacienteExistente);
@@ -191,6 +191,9 @@ namespace WebApi.Application.Services.Paciente
                 PacienteToUpdate.CreatedAt = PacienteExistente.CreatedAt;
                 PacienteToUpdate.CreatedBy = PacienteExistente.CreatedBy;
                 PacienteToUpdate.IsDeleted = false;
+                PacienteToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _pacienteRepository.UpdatePacienteAsync(PacienteToUpdate);
                 if (!result)
                 {

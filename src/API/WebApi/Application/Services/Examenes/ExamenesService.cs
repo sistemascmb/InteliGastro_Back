@@ -32,7 +32,7 @@ namespace WebApi.Application.Services.Examenes
 
                 var examenesEntity = _mapper.Map<ExamenesEntity>(createExamenesDto);
                 examenesEntity.IsDeleted = false; // Asegurarse de que IsDeleted esté en false al crear
-                examenesEntity.CreatedAt = DateTime.UtcNow; // Establecer la fecha de creación
+                examenesEntity.CreatedAt = DateTime.Now; // Establecer la fecha de creación
                 var newExamenId = await _examenesRepository.CreateExamenesAsync(examenesEntity);
                 _logger.LogInformation("Examen creado con ID: {newExamenId}", newExamenId);
                 var newExamenes = await _examenesRepository.GetExamenesByIdAsync(newExamenId);
@@ -73,7 +73,7 @@ namespace WebApi.Application.Services.Examenes
                     throw new InvalidOperationException($"No se puede eliminar el Examen con ID: {id} por que ya está eiminado lógicamente.");
                 }
                 examenesExistente.IsDeleted = true;
-                examenesExistente.UpdatedAt = DateTime.UtcNow;
+                examenesExistente.UpdatedAt = DateTime.Now;
                 examenesExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _examenesRepository.UpdateExamenesAsync(examenesExistente);
@@ -191,6 +191,9 @@ namespace WebApi.Application.Services.Examenes
                 examenesToUpdate.CreatedAt = examenesExistente.CreatedAt;
                 examenesToUpdate.CreatedBy = examenesExistente.CreatedBy;
                 examenesToUpdate.IsDeleted = false;
+                examenesToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _examenesRepository.UpdateExamenesAsync(examenesToUpdate);
                 if (!result)
                 {

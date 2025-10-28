@@ -50,7 +50,7 @@ namespace WebApi.Application.Services.Plantilla
 
                 var PlantillaEntity = _mapper.Map<PlantillaEntity>(createPlantillaDto);
                 PlantillaEntity.IsDeleted = false;
-                PlantillaEntity.CreatedAt = DateTime.UtcNow;
+                PlantillaEntity.CreatedAt = DateTime.Now;
                 var newPlantillaId = await _PlantillaRepository.CreatePlantillaAsync(PlantillaEntity);
                 _logger.LogInformation("Plantilla creado con ID: {PlantillaId}", newPlantillaId);
                 var newPlantilla = await _PlantillaRepository.GetPlantillaByIdAsync(newPlantillaId);
@@ -90,7 +90,7 @@ namespace WebApi.Application.Services.Plantilla
                     throw new InvalidOperationException($"No se puede eliminar el Plantilla con ID: {PlantillaId} por que ya está eiminado lógicamente.");
                 }
                 PlantillaExistente.IsDeleted = true;
-                PlantillaExistente.UpdatedAt = DateTime.UtcNow;
+                PlantillaExistente.UpdatedAt = DateTime.Now;
                 PlantillaExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _PlantillaRepository.UpdatePlantillaAsync(PlantillaExistente);
@@ -227,6 +227,9 @@ namespace WebApi.Application.Services.Plantilla
                 PlantillaToUpdate.CreatedAt = PlantillaExistente.CreatedAt;
                 PlantillaToUpdate.CreatedBy = PlantillaExistente.CreatedBy;
                 PlantillaToUpdate.IsDeleted = false;
+                PlantillaToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _PlantillaRepository.UpdatePlantillaAsync(PlantillaToUpdate);
                 if (!result)
                 {

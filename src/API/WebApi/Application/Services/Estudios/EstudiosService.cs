@@ -50,7 +50,7 @@ namespace WebApi.Application.Services.Estudios
 
                 var estudiosEntity = _mapper.Map<EstudiosEntity>(createEstudiosDto);
                 estudiosEntity.IsDeleted = false;
-                estudiosEntity.CreatedAt = DateTime.UtcNow;
+                estudiosEntity.CreatedAt = DateTime.Now;
                 var newEstudiosId = await _estudiosRepository.CreateEstudiosAsync(estudiosEntity);
                 _logger.LogInformation("Estudios creado con ID: {EstudiosId}", newEstudiosId);
                 var newEstudios = await _estudiosRepository.GetEstudiosByIdAsync(newEstudiosId);
@@ -90,7 +90,7 @@ namespace WebApi.Application.Services.Estudios
                     throw new InvalidOperationException($"No se puede eliminar el Estudio con ID: {estudiosId} por que ya está eiminado lógicamente.");
                 }
                 estudiosExistente.IsDeleted = true;
-                estudiosExistente.UpdatedAt = DateTime.UtcNow;
+                estudiosExistente.UpdatedAt = DateTime.Now;
                 estudiosExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _estudiosRepository.UpdateEstudiosAsync(estudiosExistente);
@@ -227,6 +227,9 @@ namespace WebApi.Application.Services.Estudios
                 estudiosToUpdate.CreatedAt = estudiosExistente.CreatedAt;
                 estudiosToUpdate.CreatedBy = estudiosExistente.CreatedBy;
                 estudiosToUpdate.IsDeleted = false;
+                estudiosToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _estudiosRepository.UpdateEstudiosAsync(estudiosToUpdate);   
                 if (!result)
                 {

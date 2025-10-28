@@ -31,7 +31,7 @@ namespace WebApi.Application.Services.Roles
                 _logger.LogInformation("Iniciando creación de Roles");
                 var RolesEntity = _mapper.Map<RolesEntity>(createRolesDto);
                 RolesEntity.IsDeleted = false;
-                RolesEntity.CreatedAt = DateTime.UtcNow;
+                RolesEntity.CreatedAt = DateTime.Now;
                 var newRolesId = await _rolesRepository.CreateRolesAsync(RolesEntity);
                 _logger.LogInformation("Roles creado con ID: {RolesId}", newRolesId);
                 var newRoles = await _rolesRepository.GetRolesByIdAsync(newRolesId);
@@ -71,7 +71,7 @@ namespace WebApi.Application.Services.Roles
                     throw new InvalidOperationException($"No se puede eliminar el Rol con ID: {RolesId} por que ya está eiminado lógicamente.");
                 }
                 RolesExistente.IsDeleted = true;
-                RolesExistente.UpdatedAt = DateTime.UtcNow;
+                RolesExistente.UpdatedAt = DateTime.Now;
                 RolesExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _rolesRepository.UpdateRolesAsync(RolesExistente);
@@ -191,6 +191,9 @@ namespace WebApi.Application.Services.Roles
                 RolesToUpdate.CreatedAt = RolesExistente.CreatedAt;
                 RolesToUpdate.CreatedBy = RolesExistente.CreatedBy;
                 RolesToUpdate.IsDeleted = false;
+                RolesToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _rolesRepository.UpdateRolesAsync(RolesToUpdate);
                 if (!result)
                 {

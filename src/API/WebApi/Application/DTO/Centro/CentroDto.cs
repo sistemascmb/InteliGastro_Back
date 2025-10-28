@@ -10,8 +10,8 @@ namespace WebApi.Application.DTO.Centro
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Abreviatura { get; set; }
-        public DateTimeOffset? InicioAtencion { get; set; }
-        public DateTimeOffset? FinAtencion { get; set; }
+        public string InicioAtencion { get; set; }
+        public string FinAtencion { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public int Departamento { get; set; }

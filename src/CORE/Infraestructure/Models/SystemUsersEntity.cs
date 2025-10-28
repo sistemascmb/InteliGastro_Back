@@ -16,39 +16,17 @@ namespace Infraestructure.Models
         [Column]
         public long userid { get; set; }
         [Column]
-        public long? ProfileTypeId { get; set; }
+        public long? profiletypeid { get; set; }
         [Column]
-        public Boolean IsInternalUser { get; set; }
+        public long? Personalid { get; set; }
         [Column]
-        public string FirstName { get; set; }
+        public string Usuario { get; set; }
         [Column]
-        public string LastName { get; set; }
+        public string Contraseña { get; set; }
         [Column]
-        public string SecondLastName { get; set; }
+        public string ContraseñaC { get; set; }
         [Column]
-        public string Email { get; set; }
-        [Column]
-        public string ContactNumber { get; set; }
-        [Column]
-        public string Address { get; set; }
-        [Column]
-        public DateTime DateOfBirth { get; set; }
-        [Column]
-        public long? GenderId { get; set; }
-        [Column]
-        public string ProfilePicture { get; set; }
-        [Column]
-        public long? DocumentTypeId { get; set; }
-        [Column]
-        public string DocumentNumber { get; set; }
-        [Column]
-        public int Version { get; set; }
-        [Column]
-        public int Estado { get; set; }
-        [Column]
-        public DateTime FechaCreacion { get; set; }
-        [Column]
-        public bool RegistroEliminado { get; set; }
+        public Boolean Estado { get; set; }
         [Column]
         public DateTime CreatedAt { get; set; }
         [Column]

@@ -6,23 +6,13 @@
         // Propiedades DTO
         //--------------------------------------------------------------
         //public long UserId { get; set; }
-        public int? ProfileTypeId { get; set; }
-        public Boolean IsInternalUser { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string SecondLastName { get; set; }
-        public string Email { get; set; }
-        public string ContactNumber { get; set; }
-        public string Address { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public int GenderId { get; set; }
-        public string ProfilePicture { get; set; }
-        public int DocumentTypeId { get; set; }
-        public string DocumentNumber { get; set; }
-        public int Version { get; set; }
-        public int Estado { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public bool RegistroEliminado { get; set; }
+        public int? profiletypeid { get; set; }
+        public int? Personalid { get; set; }
+        public string Usuario { get; set; }
+        public string Contraseña { get; set; }
+        public string ContraseñaC { get; set; }
+        public Boolean Estado { get; set; }
+
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
         //public DateTime UpdatedAt { get; set; }

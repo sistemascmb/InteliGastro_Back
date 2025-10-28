@@ -50,7 +50,7 @@ namespace WebApi.Application.Services.Salas
 
                 var salasEntity = _mapper.Map<SalasEntity>(createSalasDto);
                 salasEntity.IsDeleted = false; // Asegurarse de que IsDeleted esté en false al crear
-                salasEntity.CreatedAt = DateTime.UtcNow; // Establecer la fecha de creación
+                salasEntity.CreatedAt = DateTime.Now; // Establecer la fecha de creación
                 var newSalasId = await _salasRepository.CreateSalasAsync(salasEntity);
                 _logger.LogInformation("Sala creada con ID: {SalasId}", newSalasId);
                 var newSalas = await _salasRepository.GetSalasByIdAsync(newSalasId);
@@ -94,7 +94,7 @@ namespace WebApi.Application.Services.Salas
                 }
 
                 salasExistentes.IsDeleted = true;
-                salasExistentes.UpdatedAt = DateTime.UtcNow;
+                salasExistentes.UpdatedAt = DateTime.Now;
                 salasExistentes.UpdatedBy = eliminadoPor;
 
                 var result = await _salasRepository.UpdateSalasAsync(salasExistentes);
@@ -227,6 +227,7 @@ namespace WebApi.Application.Services.Salas
                 salasToUpdate.CreatedAt = salasExistente.CreatedAt; // Mantener la fecha de creación original
                 salasToUpdate.CreatedBy = salasExistente.CreatedBy; // Actualizar la fecha de modificación
                 salasToUpdate.IsDeleted = false; // Mantener el estado de eliminación original
+                salasToUpdate.UpdatedAt = DateTime.Now;
 
                 var result = await _salasRepository.UpdateSalasAsync(salasToUpdate);
                 if (!result)

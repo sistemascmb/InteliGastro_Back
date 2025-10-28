@@ -45,7 +45,7 @@ namespace WebApi.Application.Services.Personal
                 
                 var personalEntity = _mapper.Map<Infraestructure.Models.PersonalEntity>(createPersonalDto);
                 personalEntity.IsDeleted = false;
-                personalEntity.CreatedAt = DateTime.UtcNow;
+                personalEntity.CreatedAt = DateTime.Now;
                 var personalId = _personalRepository.CreatePersonalAsync(personalEntity).Result;
                 _logger.LogInformation("Personal creado exitosamente con ID: {PersonalId}", personalId);
                 var personalCreado = _personalRepository.GetPersonalByIdAsync(personalId).Result;
@@ -84,7 +84,7 @@ namespace WebApi.Application.Services.Personal
                     throw new InvalidOperationException($"No se puede eliminar el Personal con ID: {personalId} porque ya está eliminado lógicamente.");
                 }
                 personalExistente.IsDeleted = true;
-                personalExistente.UpdatedAt = DateTime.UtcNow;
+                personalExistente.UpdatedAt = DateTime.Now;
                 personalExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _personalRepository.UpdatePersonalAsync(personalExistente);
@@ -223,6 +223,8 @@ namespace WebApi.Application.Services.Personal
                 personalEntity.CreatedAt = personalExistente.CreatedAt;
                 personalEntity.CreatedBy = personalExistente.CreatedBy;
                 personalEntity.IsDeleted = false;
+                personalEntity.UpdatedAt = DateTime.Now;
+
                 var result = await _personalRepository.UpdatePersonalAsync(personalEntity);
                 if (!result)
                 {

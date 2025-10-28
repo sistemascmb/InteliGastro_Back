@@ -19,9 +19,9 @@ namespace Infraestructure.Models
         [Column] 
         public string Abreviatura { get; set; }
         [Column] 
-        public DateTimeOffset? InicioAtencion { get; set; }
+        public string InicioAtencion { get; set; }
         [Column] 
-        public DateTimeOffset? FinAtencion { get; set; }
+        public string FinAtencion { get; set; }
         [Column] 
         public string Direccion { get; set; }
         [Column] 

@@ -30,7 +30,7 @@ namespace WebApi.Application.Services.Suministros
                 
                 var SuministrosEntity = _mapper.Map<SuministrosEntity>(createSuministrosDto);
                 SuministrosEntity.IsDeleted = false;
-                SuministrosEntity.CreatedAt = DateTime.UtcNow;
+                SuministrosEntity.CreatedAt = DateTime.Now;
                 var newSuministrosId = await _suministrosRepository.CreateSuministrosAsync(SuministrosEntity);
                 _logger.LogInformation("Suministros creado con ID: {SuministrosId}", newSuministrosId);
                 var newSuministros = await _suministrosRepository.GetSuministrosByIdAsync(newSuministrosId);
@@ -70,7 +70,7 @@ namespace WebApi.Application.Services.Suministros
                     throw new InvalidOperationException($"No se puede eliminar el Suministro con ID: {SuministrosId} por que ya está eiminado lógicamente.");
                 }
                 SuministrosExistente.IsDeleted = true;
-                SuministrosExistente.UpdatedAt = DateTime.UtcNow;
+                SuministrosExistente.UpdatedAt = DateTime.Now;
                 SuministrosExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _suministrosRepository.UpdateSuministrosAsync(SuministrosExistente);
@@ -189,6 +189,8 @@ namespace WebApi.Application.Services.Suministros
                 SuministrosToUpdate.CreatedAt = SuministrosExistente.CreatedAt;
                 SuministrosToUpdate.CreatedBy = SuministrosExistente.CreatedBy;
                 SuministrosToUpdate.IsDeleted = false;
+                SuministrosToUpdate.UpdatedAt = DateTime.Now;
+
                 var result = await _suministrosRepository.UpdateSuministrosAsync(SuministrosToUpdate);
                 if (!result)
                 {

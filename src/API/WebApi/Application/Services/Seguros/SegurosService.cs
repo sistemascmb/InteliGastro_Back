@@ -30,7 +30,7 @@ namespace WebApi.Application.Services.Seguros
                 
                 var SegurosEntity = _mapper.Map<SegurosEntity>(createSegurosDto);
                 SegurosEntity.IsDeleted = false;
-                SegurosEntity.CreatedAt = DateTime.UtcNow;
+                SegurosEntity.CreatedAt = DateTime.Now;
                 var newSegurosId = await _segurosRepository.CreateSegurosAsync(SegurosEntity);
                 _logger.LogInformation("Seguros creado con ID: {SegurosId}", newSegurosId);
                 var newSeguros = await _segurosRepository.GetSegurosByIdAsync(newSegurosId);
@@ -70,7 +70,7 @@ namespace WebApi.Application.Services.Seguros
                     throw new InvalidOperationException($"No se puede eliminar el Seguros con ID: {SegurosId} por que ya está eiminado lógicamente.");
                 }
                 SegurosExistente.IsDeleted = true;
-                SegurosExistente.UpdatedAt = DateTime.UtcNow;
+                SegurosExistente.UpdatedAt = DateTime.Now;
                 SegurosExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _segurosRepository.UpdateSegurosAsync(SegurosExistente);
@@ -189,7 +189,10 @@ namespace WebApi.Application.Services.Seguros
                 SegurosToUpdate.CreatedAt = SegurosExistente.CreatedAt;
                 SegurosToUpdate.CreatedBy = SegurosExistente.CreatedBy;
                 SegurosToUpdate.IsDeleted = false;
-                var result = await _segurosRepository.UpdateSegurosAsync(SegurosToUpdate);
+				SegurosToUpdate.UpdatedAt = DateTime.Now;
+
+
+				var result = await _segurosRepository.UpdateSegurosAsync(SegurosToUpdate);
                 if (!result)
                 {
                     throw new InvalidOperationException($"No se pudo actualizar el Seguros con ID: {updateSegurosDto.insuranceid}");

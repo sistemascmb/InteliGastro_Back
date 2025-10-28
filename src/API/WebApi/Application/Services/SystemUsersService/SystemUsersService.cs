@@ -27,9 +27,8 @@ namespace WebApi.Application.Services.SystemUsersService
             // Usar AutoMapper para convertir CreatePersonaDto a PersonaEntity
             var systemUserEntity = _mapper.Map<SystemUsersEntity>(createSystemUsersDto);
 
-            systemUserEntity.FechaCreacion = DateTime.UtcNow;
-            systemUserEntity.CreatedAt = DateTime.UtcNow;
-            systemUserEntity.RegistroEliminado = false;
+            systemUserEntity.CreatedAt = DateTime.Now;
+            systemUserEntity.IsDeleted = false;
 
             var systemUserId = _systemUsersRepository.CreateSystemUsersAsync(systemUserEntity);
 
@@ -64,15 +63,14 @@ namespace WebApi.Application.Services.SystemUsersService
             }
 
             //verificarmos que no estè eliminado lògicamente
-            if (systemUserExistente.RegistroEliminado)
+            if (systemUserExistente.IsDeleted)
             {
                 throw new InvalidOperationException($"No se puede eliminar el SystemUsers con ID: {UserId} porque está eliminado lógicamente.");
             }
 
             //usar crud del repositorio
             systemUserExistente.IsDeleted = true;
-            systemUserExistente.RegistroEliminado = true;
-            systemUserExistente.UpdatedAt = DateTime.UtcNow;
+            systemUserExistente.UpdatedAt = DateTime.Now;
             systemUserExistente.UpdatedBy = eliminadoPor;
 
             //if (eliminadoPor.HasValue)
@@ -162,18 +160,18 @@ namespace WebApi.Application.Services.SystemUsersService
                 var systemUserExistente = (SystemUsersEntity)systemUserExist;
 
                 //verificarmos que no estè eliminado lògicamente
-                if (systemUserExistente.RegistroEliminado)
+                if (systemUserExistente.IsDeleted)
                 {
                     throw new InvalidOperationException($"No se puede actualizar el SystemUsers con ID: {updateSystemUsersDto.UserId} porque está eliminado lógicamente.");
                 }
 
                 var systemUserEntity = _mapper.Map<SystemUsersEntity>(updateSystemUsersDto);
-                systemUserEntity.FechaCreacion = systemUserExistente.FechaCreacion;
-                systemUserEntity.RegistroEliminado = false;
                 systemUserEntity.CreatedAt = systemUserExistente.CreatedAt;
                 systemUserEntity.CreatedBy = systemUserExistente.CreatedBy;
                 systemUserEntity.IsDeleted = false;
-                //systemUserEntity.UpdatedAt = DateTime.UtcNow;
+                systemUserEntity.UpdatedAt = DateTime.Now;
+
+                //systemUserEntity.UpdatedAt = DateTime.Now;
                 //systemUserEntity.UpdatedBy = systemUserExistente.UpdatedBy; //suponiendo que viene en el dto
 
                 //usar crud del repositorio
@@ -218,8 +216,7 @@ namespace WebApi.Application.Services.SystemUsersService
                     systemUsersList = systemUsersList.Where(s =>
                     {
                         var entity = (SystemUsersEntity)s;
-                        return (entity.FirstName != null && entity.FirstName.Contains(condicion, StringComparison.OrdinalIgnoreCase)) ||
-                        (entity.LastName != null && entity.LastName.Contains(condicion, StringComparison.OrdinalIgnoreCase));
+                        return (entity.Usuario != null && entity.Usuario.Contains(condicion, StringComparison.OrdinalIgnoreCase));
                     }).ToList();
                 }
                 systemUsersDtos = _mapper.Map<SystemUsersDto[]>(systemUsersList);

@@ -32,7 +32,7 @@ namespace WebApi.Application.Services.Preparacion
                 
                 var preparacionEntity = _mapper.Map<PreparacionEntity>(createpreparacionDto);
                 preparacionEntity.IsDeleted = false;
-                preparacionEntity.CreatedAt = DateTime.UtcNow;
+                preparacionEntity.CreatedAt = DateTime.Now;
                 var newpreparacionId = await _preparacionRepository.CreatePreparacionAsync(preparacionEntity);
                 _logger.LogInformation("preparacion creado con ID: {preparacionId}", newpreparacionId);
                 var newpreparacion = await _preparacionRepository.GetPreparacionByIdAsync(newpreparacionId);
@@ -72,7 +72,7 @@ namespace WebApi.Application.Services.Preparacion
                     throw new InvalidOperationException($"No se puede eliminar el Preparacion con ID: {preparacionId} por que ya está eiminado lógicamente.");
                 }
                 preparacionExistente.IsDeleted = true;
-                preparacionExistente.UpdatedAt = DateTime.UtcNow;
+                preparacionExistente.UpdatedAt = DateTime.Now;
                 preparacionExistente.UpdatedBy = eliminadoPor;
 
                 var result = await _preparacionRepository.UpdatePreparacionAsync(preparacionExistente);
@@ -191,6 +191,9 @@ namespace WebApi.Application.Services.Preparacion
                 preparacionToUpdate.CreatedAt = preparacionExistente.CreatedAt;
                 preparacionToUpdate.CreatedBy = preparacionExistente.CreatedBy;
                 preparacionToUpdate.IsDeleted = false;
+                preparacionToUpdate.UpdatedAt = DateTime.Now;
+
+
                 var result = await _preparacionRepository.UpdatePreparacionAsync(preparacionToUpdate);
                 if (!result)
                 {

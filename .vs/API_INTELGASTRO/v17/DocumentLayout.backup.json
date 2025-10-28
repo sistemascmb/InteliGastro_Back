@@ -3,28 +3,72 @@
   "WorkspaceRootPath": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\systemparametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\systemparametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemusersservice\\systemusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemusersservice\\systemusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\seguros\\segurosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\seguros\\segurosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemparameter\\systemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemparameter\\systemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\systemusers\\systemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\systemusers\\systemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemparameter\\isystemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemparameter\\isystemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\systemusers\\updatesystemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\systemusers\\updatesystemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\systemusers\\createsystemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\systemusers\\createsystemusersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\models\\systemusersentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\models\\systemusersentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\systemuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\systemuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemusersservice\\systemusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemusersservice\\systemusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\centrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\centrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\personalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\personalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemparameter\\systemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemparameter\\systemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\centrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\centrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\systemparametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\systemparametercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\models\\centroentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\models\\centroentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\centro\\updatecentrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\centro\\updatecentrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\centro\\createcentrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\centro\\createcentrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\centro\\centrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\centro\\centrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemparameter\\isystemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\systemparameter\\isystemparameterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\systemusersservice\\isystemusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,24 +110,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 14,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SegurosService.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Seguros\\SegurosService.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Seguros\\SegurosService.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Seguros\\SegurosService.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Seguros\\SegurosService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CentroController.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\CentroController.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\CentroController.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\CentroController.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Controllers\\CentroController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T15:29:12.309Z",
+              "WhenOpened": "2025-10-10T21:22:03.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CentroRepository.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\CentroRepository.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\CentroRepository.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\CentroRepository.cs",
+              "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\CentroRepository.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAEwGsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:29:41.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CentroEntity.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\CentroEntity.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\CentroEntity.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\CentroEntity.cs",
+              "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\CentroEntity.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:29:20.679Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "UpdateCentroDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\UpdateCentroDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Centro\\UpdateCentroDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\UpdateCentroDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Centro\\UpdateCentroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:29:08.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateCentroDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\CreateCentroDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Centro\\CreateCentroDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\CreateCentroDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Centro\\CreateCentroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:29:03.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CentroDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\CentroDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Centro\\CentroDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Centro\\CentroDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Centro\\CentroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T23:28:48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "SegurosController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SegurosController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\SegurosController.cs",
@@ -92,29 +196,106 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T15:04:30.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemUsersDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\SystemUsersDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\SystemUsersDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\SystemUsersDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\SystemUsersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:12:56.788Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 30,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowFEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:17:30.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SystemUsersEntity.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\SystemUsersEntity.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\SystemUsersEntity.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\SystemUsersEntity.cs",
+              "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\SystemUsersEntity.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:13:59.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateSystemUsersDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\UpdateSystemUsersDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\UpdateSystemUsersDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\UpdateSystemUsersDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\UpdateSystemUsersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:13:32.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateSystemUsersDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\CreateSystemUsersDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\CreateSystemUsersDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\SystemUsers\\CreateSystemUsersDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\SystemUsers\\CreateSystemUsersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:11:11.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PersonalController.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\PersonalController.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\PersonalController.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\PersonalController.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Controllers\\PersonalController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T21:59:01.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "SystemParameterController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemParameterController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\SystemParameterController.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemParameterController.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\SystemParameterController.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAgwGgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAgwF8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:10:33.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-04T17:10:33.006Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 23,
               "Title": "SystemParameterEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\SystemParameterEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\SystemParameterEntity.cs",
@@ -126,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "BaseCrudRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\Base\\BaseCrudRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\Base\\BaseCrudRepository.cs",
@@ -138,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 18,
               "Title": "SystemParameterRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\SystemParameterRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\SystemParameterRepository.cs",
@@ -150,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 19,
               "Title": "ISystemParameterRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\ISystemParameterRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\ISystemParameterRepository.cs",
@@ -162,19 +343,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "SystemParameterService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemParameter\\SystemParameterService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\SystemParameter\\SystemParameterService.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemParameter\\SystemParameterService.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\SystemParameter\\SystemParameterService.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAewMAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAvwPsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-04T15:29:05.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "ISystemParameterService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemParameter\\ISystemParameterService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\SystemParameter\\ISystemParameterService.cs",
@@ -186,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "SystemUsersRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\SystemUsersRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\SystemUsersRepository.cs",
@@ -198,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 22,
               "Title": "ISystemUsersRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\ISystemUsersRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\ISystemUsersRepository.cs",
@@ -210,19 +391,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "SystemUsersService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemUsersService\\SystemUsersService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\SystemUsersService\\SystemUsersService.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemUsersService\\SystemUsersService.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\SystemUsersService\\SystemUsersService.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAIwAkAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAhwNIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:57:56.808Z"
+              "WhenOpened": "2025-09-29T23:57:56.808Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 17,
               "Title": "ISystemUsersService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\SystemUsersService\\ISystemUsersService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\SystemUsersService\\ISystemUsersService.cs",
@@ -234,15 +416,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SystemUsersController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAA8wGYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T23:49:10.908Z"
+              "WhenOpened": "2025-09-29T23:49:10.908Z",
+              "EditorCaption": ""
             }
           ]
         }
