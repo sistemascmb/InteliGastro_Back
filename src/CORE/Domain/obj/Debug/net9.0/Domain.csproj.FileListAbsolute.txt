@@ -12,6 +12,7 @@ D:\DEV\API_CMB\API_CMB\src\CORE\Domain\obj\Debug\net9.0\ref\Domain.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\bin\Debug\net9.0\Domain.deps.json
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\bin\Debug\net9.0\Domain.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\bin\Debug\net9.0\Domain.pdb
+D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
@@ -21,4 +22,3 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.d
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\refint\Domain.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.pdb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\ref\Domain.dll
-D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\CORE\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache

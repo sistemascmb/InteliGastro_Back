@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using WebApi.Application.DTO.Agenda;
@@ -132,6 +132,31 @@ namespace WebApi.Application.Services.Agenda
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al obtener todos los Agenda");
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<AgendaDto>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de agenda por rango de fechas: {StartDate} - {EndDate}", startDate, endDate);
+
+                if (startDate > endDate)
+                {
+                    throw new ArgumentException("La fecha inicial no puede ser mayor que la fecha final");
+                }
+
+                var agendas = await _AgendaRepository.SearchAgendaByDateRangeAsync(startDate, endDate);
+                var agendaDtos = _mapper.Map<IEnumerable<AgendaDto>>(agendas);
+
+                _logger.LogInformation("Búsqueda de agenda completada. Se encontraron {Count} registros", agendaDtos.Count());
+
+                return agendaDtos;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar agenda por rango de fechas");
                 throw;
             }
         }

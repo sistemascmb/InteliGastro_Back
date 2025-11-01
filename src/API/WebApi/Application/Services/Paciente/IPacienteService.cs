@@ -1,4 +1,4 @@
-﻿using WebApi.Application.DTO.Paciente;
+using WebApi.Application.DTO.Paciente;
 
 namespace WebApi.Application.Services.Paciente
 {
@@ -10,5 +10,7 @@ namespace WebApi.Application.Services.Paciente
         Task<bool> DeletePacienteAsync(long pacienteId, string eliminadoPor);
         Task<IEnumerable<PacienteDto>> GetWhereAsync(string condicion);
         Task<IEnumerable<PacienteDto>> GetAllPacienteAsync();
+        Task<PacienteDto?> GetByDocumentNumberAsync(string documentNumber);
+        Task<IEnumerable<PacienteDto>> SearchPacientesAsync(string? documentNumber, string? names, string? lastNames);
     }
 }

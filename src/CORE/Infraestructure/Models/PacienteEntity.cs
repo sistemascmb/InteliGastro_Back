@@ -14,7 +14,7 @@ namespace Infraestructure.Models
         public long pacientid { get; set; }
         [Column]
         public int TypeDoc { get; set; }
-        [Column]
+        [Column("DocumentNumber")]
         public string DocumentNumber { get; set; }
         [Column]
         public string Names { get; set; }
@@ -56,7 +56,8 @@ namespace Infraestructure.Models
         public DateTime UpdatedAt { get; set; }
         [Column]
         public string UpdatedBy { get; set; }
-        [Column]
+
+        [Column("IsDeleted")]
         public Boolean IsDeleted { get; set; }
     }
 }

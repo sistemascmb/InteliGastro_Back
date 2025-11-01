@@ -1,10 +1,9 @@
 using Dapper;
 using Dapper.Contrib.Extensions;
-using Infraestructure.Helpers;
-using Infraestructure.Models;
+using Npgsql;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Npgsql;
+using Infraestructure.Helpers;
 
 namespace Infraestructure.Repositories.Base
 {
@@ -204,9 +203,6 @@ namespace Infraestructure.Repositories.Base
                 await connection.OpenAsync();
 
                 _logger.LogInformation("Actualizando entidad en tabla {TableName}", _tableName);
-
-                // Convertir DateTimeOffset a UTC para PostgreSQL
-                DateTimeOffsetHelper.ConvertDateTimeOffsetsToUtc(entity);
 
                 var result = await connection.UpdateAsync(entity);
 
@@ -428,8 +424,32 @@ namespace Infraestructure.Repositories.Base
         {
             throw new NotImplementedException();
         }
+        protected async Task<TEntity?> GetSingleByConditionAsync(string whereClause, object parameters)
+        {
+            try
+            {
 
-        
+                using var connection = new NpgsqlConnection(_connectionString);
+                await connection.OpenAsync();
+
+                var query = $"SELECT * FROM {_tableName} WHERE {whereClause}";
+                _logger.LogDebug("Ejecutando consulta: {Query} en tabla {TableName}", query, _tableName);
+
+                var result = await connection.QueryFirstOrDefaultAsync<TEntity>(query, parameters);
+
+                _logger.LogDebug("Se obtuvieron {Count} entidades con condición: {WhereClause}", result, whereClause);
+
+                _logger.LogInformation("Resultado de la búsqueda en tabla {TableName}: {Found}", 
+                    _tableName, result != null ? "Encontrado" : "No encontrado");
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar en tabla {TableName} con condición: {WhereClause}", _tableName, whereClause);
+                throw;
+            }
+        }
     }
 }
 

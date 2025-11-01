@@ -239,6 +239,47 @@
     ]
   },
   {
+    "ContainingType": "WebApi.Controllers.AgendaController",
+    "Method": "SearchByDateRange",
+    "RelativePath": "api/Agenda/search/date-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.Application.DTO.Agenda.AgendaDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApi.Controllers.ArchivoDigitalController",
     "Method": "CreateArchivoDigitalLaboratorioAsyncc",
     "RelativePath": "api/ArchivoDigital/ArchivoDigital",
@@ -1895,8 +1936,90 @@
   },
   {
     "ContainingType": "WebApi.Controllers.PacienteController",
-    "Method": "GetWhere",
+    "Method": "GetByDocumentNumber",
+    "RelativePath": "api/Paciente/document/{documentNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documentNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi.Application.DTO.Paciente.PacienteDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PacienteController",
+    "Method": "SearchPacientes",
     "RelativePath": "api/Paciente/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documentNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "names",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lastNames",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.Application.DTO.Paciente.PacienteDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PacienteController",
+    "Method": "GetWhere",
+    "RelativePath": "api/Paciente/where",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

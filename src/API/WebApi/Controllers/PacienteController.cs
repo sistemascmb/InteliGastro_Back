@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.DTO.Paciente;
 using WebApi.Application.Services.Paciente;
 
@@ -80,7 +80,7 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("search")]
+        [HttpGet("where")]
         [ProducesResponseType(typeof(IEnumerable<object>), 200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
@@ -90,5 +90,81 @@ namespace WebApi.Controllers
             var result = await _PacienteService.GetWhereAsync(condicion);
             return Ok(result);
         }
+        /// <summary>
+        /// Obtiene un paciente por su número de documento
+        /// </summary>
+        /// <param name="documentNumber">Número de documento del paciente</param>
+        /// <returns>Información del paciente</returns>
+        /// <response code="200">Devuelve el paciente encontrado o null si no existe</response>
+        /// <response code="400">Si el número de documento está vacío</response>
+        /// <response code="500">Si ocurre un error interno en el servidor</response>
+        [HttpGet("document/{documentNumber}")]
+        [ProducesResponseType(typeof(PacienteDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<PacienteDto>> GetByDocumentNumber([FromRoute] string documentNumber)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(documentNumber))
+                {
+                    return BadRequest("El número de documento no puede estar vacío");
+                }
+
+                var paciente = await _PacienteService.GetByDocumentNumberAsync(documentNumber);
+                return Ok(paciente);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener paciente por número de documento: {DocumentNumber}", documentNumber);
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error interno del servidor");
+            }
+        }
+        /// <summary>
+        /// Busca pacientes por DNI, nombres y/o apellidos
+        /// </summary>
+        /// <param name="documentNumber">Número de documento (opcional)</param>
+        /// <param name="names">Nombres (opcional)</param>
+        /// <param name="lastNames">Apellidos (opcional)</param>
+        /// <returns>Lista de pacientes que coinciden con los criterios de búsqueda</returns>
+        /// <response code="200">Devuelve la lista de pacientes encontrados</response>
+        /// <response code="400">Si no se proporciona ningún criterio de búsqueda</response>
+        /// <response code="500">Si ocurre un error interno en el servidor</response>
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(IEnumerable<PacienteDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<PacienteDto>>> SearchPacientes(
+            [FromQuery] string? documentNumber,
+            [FromQuery] string? names,
+            [FromQuery] string? lastNames)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(documentNumber) && 
+                    string.IsNullOrWhiteSpace(names) && 
+                    string.IsNullOrWhiteSpace(lastNames))
+                {
+                    return BadRequest("Debe proporcionar al menos un criterio de búsqueda (DNI, nombres o apellidos)");
+                }
+
+                var pacientes = await _PacienteService.SearchPacientesAsync(documentNumber, names, lastNames);
+                return Ok(pacientes);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar pacientes con los filtros especificados");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error interno del servidor");
+            }
+        }
     }
+
 }

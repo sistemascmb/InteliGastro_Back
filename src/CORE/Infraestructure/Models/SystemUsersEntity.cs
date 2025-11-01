@@ -22,9 +22,9 @@ namespace Infraestructure.Models
         [Column]
         public string Usuario { get; set; }
         [Column]
-        public string Contraseña { get; set; }
+        public string ContraseÃ±a { get; set; }
         [Column]
-        public string ContraseñaC { get; set; }
+        public string ContraseÃ±aC { get; set; }
         [Column]
         public Boolean Estado { get; set; }
         [Column]

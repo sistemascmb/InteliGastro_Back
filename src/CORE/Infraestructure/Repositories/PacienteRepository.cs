@@ -1,4 +1,4 @@
-﻿using Domain.DomainInterfaces;
+using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using Infraestructure.Persistence;
 using Infraestructure.Repositories.Base;
@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
 
 namespace Infraestructure.Repositories
 {
@@ -18,10 +19,34 @@ namespace Infraestructure.Repositories
         public PacienteRepository(
             IConfiguration configuration,
             ILogger<PacienteRepository> logger,
-            IDapperWrapper dapperWrapper) : base(configuration, logger, "studies")
+            IDapperWrapper dapperWrapper) : base(configuration, logger, "pacient")
         {
             _dapperWrapper = dapperWrapper ?? throw new ArgumentNullException(nameof(dapperWrapper));
         }
+
+        public async Task<object?> GetByConditionAsync(string documentNumber)
+        {
+            try
+            {
+                _logger.LogInformation("Buscando paciente por número de documento: {DocumentNumber}", documentNumber);
+                
+                var whereClause = "\"DocumentNumber\" = @DocumentNumber AND \"IsDeleted\" = false";
+                var parameters = new { DocumentNumber = documentNumber };
+                
+                var result = await GetSingleByConditionAsync(whereClause, parameters);
+                
+                _logger.LogInformation("Resultado de la búsqueda para el número de documento {DocumentNumber}: {Found}", 
+                    documentNumber, result != null ? "Encontrado" : "No encontrado");
+                
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar paciente por número de documento: {DocumentNumber}", documentNumber);
+                throw;
+            }
+        }
+
         public async Task<long> CreatePacienteAsync(object PacienteData)
         {
             var PacienteEntity = ConvertToPacienteEntity(PacienteData);
@@ -63,6 +88,46 @@ namespace Infraestructure.Repositories
                 }
             }
             return Paciente;
+        }
+
+        public async Task<IEnumerable<object>> SearchPacientesAsync(string? documentNumber, string? names, string? lastNames)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de pacientes con filtros");
+
+                var whereConditions = new List<string>();
+                var parameters = new DynamicParameters();
+
+                if (!string.IsNullOrWhiteSpace(documentNumber))
+                {
+                    whereConditions.Add("\"DocumentNumber\" ILIKE @DocumentNumber");
+                    parameters.Add("DocumentNumber", $"%{documentNumber}%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(names))
+                {
+                    whereConditions.Add("\"Names\" ILIKE @Names");
+                    parameters.Add("Names", $"%{names}%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(lastNames))
+                {
+                    whereConditions.Add("\"LastNames\" ILIKE @LastNames");
+                    parameters.Add("LastNames", $"%{lastNames}%");
+                }
+
+                whereConditions.Add("\"IsDeleted\" = false");
+
+                var whereClause = $"({string.Join(" OR ", whereConditions.Take(whereConditions.Count - 1))}) AND {whereConditions.Last()}";
+
+                return await GetByConditionAsync(whereClause, parameters);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar pacientes con los filtros especificados");
+                throw;
+            }
         }
     }
 }

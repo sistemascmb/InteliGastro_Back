@@ -1,4 +1,4 @@
-﻿using Domain.DomainInterfaces;
+using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using Infraestructure.Persistence;
 using Infraestructure.Repositories.Base;
@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Dapper;
 using System.Threading.Tasks;
 
 namespace Infraestructure.Repositories
@@ -63,6 +65,28 @@ namespace Infraestructure.Repositories
                 }
             }
             return Agenda;
+        }
+
+        public async Task<IEnumerable<object>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de agenda por rango de fechas: {StartDate} - {EndDate}", startDate, endDate);
+
+                var parameters = new DynamicParameters();
+                parameters.Add("@StartDate", startDate.Date);
+                parameters.Add("@EndDate", endDate.Date.AddDays(1));
+
+                var whereClause = "\"AppointmentDate\" >= @StartDate AND \"AppointmentDate\" < @EndDate AND \"IsDeleted\" = false";
+                _logger.LogInformation("Consulta WHERE: {WhereClause}", whereClause);
+
+                return await GetByConditionAsync(whereClause, parameters);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar agenda por rango de fechas: {StartDate} - {EndDate}", startDate, endDate);
+                throw;
+            }
         }
     }
 }

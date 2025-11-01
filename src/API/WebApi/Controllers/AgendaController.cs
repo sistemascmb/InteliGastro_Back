@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.DTO.Agenda;
 using WebApi.Application.Services.Agenda;
 
@@ -78,6 +78,43 @@ namespace WebApi.Controllers
             _logger.LogInformation("Iniciando endpoint GetAllAgenda [CRUD AUTOMÁTICO]");
             var result = await _AgendaService.GetAllAgendaAsync();
             return Ok(result);
+        }
+
+        [HttpGet("search/date-range")]
+        [ProducesResponseType(typeof(IEnumerable<AgendaDto>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> SearchByDateRange([FromQuery(Name = "startDate")] string startDateStr, [FromQuery(Name = "endDate")] string endDateStr)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de agenda por rango de fechas. StartDate: {StartDate}, EndDate: {EndDate}", startDateStr, endDateStr);
+
+                if (string.IsNullOrEmpty(startDateStr) || string.IsNullOrEmpty(endDateStr))
+                {
+                    return BadRequest("Las fechas inicial y final son requeridas");
+                }
+
+                if (!DateTime.TryParse(startDateStr, out DateTime startDate) || !DateTime.TryParse(endDateStr, out DateTime endDate))
+                {
+                    return BadRequest("El formato de las fechas no es válido. Use el formato yyyy-MM-dd");
+                }
+
+                _logger.LogInformation("Fechas parseadas - StartDate: {StartDate}, EndDate: {EndDate}", startDate, endDate);
+
+                var result = await _AgendaService.SearchAgendaByDateRangeAsync(startDate, endDate);
+                return Ok(result);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Error de validación en búsqueda por rango de fechas");
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar agenda por rango de fechas: {Message}", ex.Message);
+                return StatusCode(500, "Error interno del servidor al procesar la solicitud");
+            }
         }
 
         [HttpGet("search")]

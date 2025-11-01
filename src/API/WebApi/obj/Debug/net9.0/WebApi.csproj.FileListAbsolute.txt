@@ -97,7 +97,6 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\WebApi.dl
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\AutoMapper.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Dapper.dll
-D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Dapper.Contrib.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Npgsql.dll
@@ -114,6 +113,7 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\WebApi.ru
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\WebApi.pdb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\BouncyCastle.Crypto.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Connection.Identifier.Quoting.dll
+D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Dapper.Contrib.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Dapper.Contrib.Extensions.Tablename.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\Google.Protobuf.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\bin\Debug\net9.0\K4os.Compression.LZ4.dll
@@ -166,10 +166,10 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticweb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.development.json
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.csproj.Up2Date
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\refint\WebApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.pdb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.genruntimeconfig.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\ref\WebApi.dll
-D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

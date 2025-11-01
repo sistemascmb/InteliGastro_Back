@@ -664,7 +664,7 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
                 .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
-                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+                .ForMember(dest => dest.isdeleted, opt => opt.MapFrom(src => src.IsDeleted));
 
             CreateMap<CreatePacienteDto, PacienteEntity>()
                 .ForMember(dest => dest.TypeDoc, opt => opt.MapFrom(src => src.TypeDoc))

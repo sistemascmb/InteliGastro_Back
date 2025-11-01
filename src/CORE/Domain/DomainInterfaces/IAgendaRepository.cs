@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +12,6 @@ namespace Domain.DomainInterfaces
         Task<object?> GetAgendaByIdAsync(long AgendaId);
         Task<bool> UpdateAgendaAsync(object AgendaData);
         Task<IEnumerable<object>> GetAllAgendaAsync();
+        Task<IEnumerable<object>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate);
     }
 }

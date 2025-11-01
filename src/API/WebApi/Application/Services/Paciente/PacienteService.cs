@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using WebApi.Application.DTO.Paciente;
@@ -211,6 +211,70 @@ namespace WebApi.Application.Services.Paciente
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al actualizar el Paciente con ID: {PacienteId}", updatePacienteDto.pacientid);
+                throw;
+            }
+        }
+
+        public async Task<PacienteDto?> GetByDocumentNumberAsync(string documentNumber)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de paciente por número de documento: {DocumentNumber}", documentNumber);
+                
+                if (string.IsNullOrWhiteSpace(documentNumber))
+                {
+                    throw new ArgumentException("El número de documento no puede estar vacío", nameof(documentNumber));
+                }
+
+                var paciente = await _pacienteRepository.GetByConditionAsync(documentNumber);
+                if (paciente == null)
+                {
+                    _logger.LogInformation("No se encontró ningún paciente con el número de documento: {DocumentNumber}", documentNumber);
+                    return null;
+                }
+
+                var pacienteEntity = (PacienteEntity)paciente;
+                if (pacienteEntity.IsDeleted)
+                {
+                    _logger.LogInformation("El paciente con número de documento {DocumentNumber} está eliminado lógicamente", documentNumber);
+                    return null;
+                }
+
+                var pacienteDto = _mapper.Map<PacienteDto>(pacienteEntity);
+                _logger.LogInformation("Paciente encontrado con número de documento: {DocumentNumber}", documentNumber);
+                return pacienteDto;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar paciente por número de documento: {DocumentNumber}", documentNumber);
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<PacienteDto>> SearchPacientesAsync(string? documentNumber, string? names, string? lastNames)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de pacientes con filtros");
+
+                if (string.IsNullOrWhiteSpace(documentNumber) && 
+                    string.IsNullOrWhiteSpace(names) && 
+                    string.IsNullOrWhiteSpace(lastNames))
+                {
+                    throw new ArgumentException("Debe proporcionar al menos un criterio de búsqueda");
+                }
+
+                var pacientes = await _pacienteRepository.SearchPacientesAsync(documentNumber, names, lastNames);
+                var pacientesDto = pacientes.Select(p => _mapper.Map<PacienteDto>((PacienteEntity)p));
+
+                _logger.LogInformation("Se encontraron {Count} pacientes con los filtros especificados", 
+                    pacientesDto.Count());
+
+                return pacientesDto;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar pacientes con los filtros especificados");
                 throw;
             }
         }

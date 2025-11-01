@@ -1,4 +1,4 @@
-﻿using WebApi.Application.DTO.Agenda;
+using WebApi.Application.DTO.Agenda;
 
 namespace WebApi.Application.Services.Agenda
 {
@@ -10,5 +10,6 @@ namespace WebApi.Application.Services.Agenda
         Task<bool> DeleteAgendaAsync(long agendaId, string eliminadoPor);
         Task<IEnumerable<AgendaDto>> GetWhereAsync(string condicion);
         Task<IEnumerable<AgendaDto>> GetAllAgendaAsync();
+        Task<IEnumerable<AgendaDto>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate);
     }
 }
