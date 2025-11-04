@@ -62,5 +62,12 @@ namespace Infraestructure.Models
         public string UpdatedBy { get; set; }
         [Column]
         public Boolean IsDeleted { get; set; }
+        [Column]
+        public string AnotacionesAdicionales { get; set; }
+        [Column]
+        public int TipoProcedimientoId { get; set; }
+        [Column]
+        public int UrgenteId { get; set; }
+
     }
 }

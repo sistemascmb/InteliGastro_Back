@@ -26,5 +26,11 @@
         public int StudiesId { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
+
+        public string AnotacionesAdicionales { get; set; }
+        public int TipoProcedimientoId { get; set; }
+        public int UrgenteId { get; set; }
+
+
     }
 }

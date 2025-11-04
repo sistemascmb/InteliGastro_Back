@@ -23,5 +23,6 @@ namespace WebApi.Application.DTO.Centro
 
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
+
     }
 }

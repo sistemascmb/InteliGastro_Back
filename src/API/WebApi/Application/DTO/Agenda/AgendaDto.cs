@@ -29,5 +29,10 @@
         public DateTime UpdatedAt { get; set; }
         public string UpdatedBy { get; set; }
         public Boolean IsDeleted { get; set; }
+
+        public string AnotacionesAdicionales { get; set; }
+        public int TipoProcedimientoId { get; set; }
+        public int UrgenteId { get; set; }
+
     }
 }
