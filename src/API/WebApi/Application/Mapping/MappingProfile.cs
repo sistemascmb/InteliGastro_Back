@@ -742,6 +742,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.StudiesId, opt => opt.MapFrom(src => src.StudiesId))
                 .ForMember(dest => dest.TipoProcedimientoId, opt => opt.MapFrom(src => src.TipoProcedimientoId))
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
+                .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
+                .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -771,6 +773,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.AnotacionesAdicionales, opt => opt.MapFrom(src => src.AnotacionesAdicionales))
                 .ForMember(dest => dest.TipoProcedimientoId, opt => opt.MapFrom(src => src.TipoProcedimientoId))
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
+                .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
+                .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
@@ -801,6 +805,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.AnotacionesAdicionales, opt => opt.MapFrom(src => src.AnotacionesAdicionales))
                 .ForMember(dest => dest.TipoProcedimientoId, opt => opt.MapFrom(src => src.TipoProcedimientoId))
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
+                .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
+                .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -922,6 +928,54 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Sort, opt => opt.MapFrom(src => src.Sort))
                 .ForMember(dest => dest.Version, opt => opt.MapFrom(src => src.Version))
                 .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => src.Estado))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            //digital_file
+            CreateMap<ArchivoDigitalEntity, ArchivoDigitalDto>()
+                .ForMember(dest => dest.digitalfileid, opt => opt.MapFrom(src => src.digitalfileid))
+                .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Date))
+                .ForMember(dest => dest.Hour, opt => opt.MapFrom(src => src.Hour))
+                .ForMember(dest => dest.Desktop, opt => opt.MapFrom(src => src.Desktop))
+                .ForMember(dest => dest.Archive, opt => opt.MapFrom(src => src.Archive))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.TypeArchive, opt => opt.MapFrom(src => src.TypeArchive))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateArchivoDigitalDto, ArchivoDigitalEntity>()
+                .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Date))
+                .ForMember(dest => dest.Hour, opt => opt.MapFrom(src => src.Hour))
+                .ForMember(dest => dest.Desktop, opt => opt.MapFrom(src => src.Desktop))
+                .ForMember(dest => dest.Archive, opt => opt.MapFrom(src => src.Archive))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.TypeArchive, opt => opt.MapFrom(src => src.TypeArchive))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateArchivoDigitalDto, ArchivoDigitalEntity>()
+                .ForMember(dest => dest.digitalfileid, opt => opt.MapFrom(src => src.digitalfileid))
+                .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.Date))
+                .ForMember(dest => dest.Hour, opt => opt.MapFrom(src => src.Hour))
+                .ForMember(dest => dest.Desktop, opt => opt.MapFrom(src => src.Desktop))
+                .ForMember(dest => dest.Archive, opt => opt.MapFrom(src => src.Archive))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.TypeArchive, opt => opt.MapFrom(src => src.TypeArchive))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))

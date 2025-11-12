@@ -12,6 +12,7 @@ using System.Reflection;
 using WebApi.Application.Mapping;
 using WebApi.Application.Services;
 using WebApi.Application.Services.Agenda;
+using WebApi.Application.Services.ArchivoDigital;
 using WebApi.Application.Services.Centro;
 using WebApi.Application.Services.Cie10;
 using WebApi.Application.Services.Estudios;
@@ -126,6 +127,8 @@ builder.Services.AddScoped<ICie10Repository, Cie10Repository>();
 builder.Services.AddScoped<ICie10Service, Cie10Service>();
 builder.Services.AddScoped<ISystemParameterRepository, SystemParameterRepository>();
 builder.Services.AddScoped<ISystemParameterService, SystemParameterService>();
+builder.Services.AddScoped<IArchivoDigitalRepositoryN, ArchivoDigitalRepositoryN>();
+builder.Services.AddScoped<IArchivoDigitalServiceN, ArchivoDigitalServiceN>();
 
 var app = builder.Build();
 

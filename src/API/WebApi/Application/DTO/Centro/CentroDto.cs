@@ -25,6 +25,5 @@ namespace WebApi.Application.DTO.Centro
         public DateTime UpdatedAt { get; set; }
         public string UpdatedBy { get; set; }
         public Boolean IsDeleted { get; set; }
-
     }
 }

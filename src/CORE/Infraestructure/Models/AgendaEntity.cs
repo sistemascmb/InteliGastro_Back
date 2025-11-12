@@ -68,6 +68,10 @@ namespace Infraestructure.Models
         public int TipoProcedimientoId { get; set; }
         [Column]
         public int UrgenteId { get; set; }
+        [Column]
+        public int? EstudioTeminadoId { get; set; }
+        [Column]
+        public int? PdfGeneradoId { get; set; }
 
     }
 }

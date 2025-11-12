@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using WebApi.Application.DTO.ArchivoDigital;
 using AutoMapper;
 using Domain.DomainInterfaces;
@@ -29,13 +29,15 @@ namespace WebApi.Application.Services
 
         public async Task<ArchivoDigitalItemListResponseDto> CreateArchivoDigitalLaboratorioAsyncc(ArchivoDigitalRequestDto archivoDigitalRequestDto)
         {
-            ArchivoDigital archivoDigital = mapper.Map<ArchivoDigital>(archivoDigitalRequestDto);
-            archivoDigital.IdAtencion = archivoDigitalRequestDto.IdAtencion;
-            archivoDigital.Archivo = archivoDigitalRequestDto.Archivo;
+            //ArchivoDigital archivoDigital = mapper.Map<ArchivoDigital>(archivoDigitalRequestDto);
+            //archivoDigital.IdAtencion = archivoDigitalRequestDto.IdAtencion;
+            //archivoDigital.Archivo = archivoDigitalRequestDto.Archivo;
 
-            ArchivoDigital createarchivoDigital = await archivoDigitalRepository.CreateArchivoDigitalLaboratorioAsync(archivoDigital);
+            //ArchivoDigital createarchivoDigital = await archivoDigitalRepository.CreateArchivoDigitalLaboratorioAsync(archivoDigital);
 
-            return mapper.Map<ArchivoDigitalItemListResponseDto>(createarchivoDigital); ;
+            //return mapper.Map<ArchivoDigitalItemListResponseDto>(createarchivoDigital);
+
+            throw new NotImplementedException();
 
         }
 

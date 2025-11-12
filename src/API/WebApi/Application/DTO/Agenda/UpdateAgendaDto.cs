@@ -32,5 +32,8 @@
         public int TipoProcedimientoId { get; set; }
         public int UrgenteId { get; set; }
 
+        public int? EstudioTeminadoId { get; set; }
+        public int? PdfGeneradoId { get; set; }
+
     }
 }
