@@ -3,44 +3,84 @@
   "WorkspaceRootPath": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\archivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\archivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\base\\basecrudrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\base\\basecrudrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\archivodigital\\archivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\archivodigital\\archivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\archivodigital\\iarchivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\archivodigital\\iarchivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\archivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\archivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\models\\archivodigitalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\models\\archivodigitalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\archivodigital\\updatearchivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\archivodigital\\updatearchivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\archivodigital\\createarchivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\archivodigital\\createarchivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\archivodigital\\archivodigitalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\archivodigital\\archivodigitalrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\dto\\archivodigital\\archivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\dto\\archivodigital\\archivodigitaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\repositories\\archivodigitalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\repositories\\archivodigitalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\archivodigital\\iarchivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\archivodigital\\iarchivodigitalservicen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\iarchivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\iarchivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\archivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\archivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\repositoriesinterfaces\\iarchivodigitalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|solutionrelative:src\\core\\domain\\repositoriesinterfaces\\iarchivodigitalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\entities\\archivodigital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|solutionrelative:src\\core\\domain\\entities\\archivodigital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\domaininterfaces\\icurrentarchivodigital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|solutionrelative:src\\core\\domain\\domaininterfaces\\icurrentarchivodigital.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\domaininterfaces\\iarchivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|solutionrelative:src\\core\\domain\\domaininterfaces\\iarchivodigitalrepositoryn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\currentarchivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\currentarchivodigitalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\infraestructure\\models\\archivodigitalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E852898C-6379-423C-9EA1-4E6B444BBD60}|src\\CORE\\Infraestructure\\Infraestructure.csproj|solutionrelative:src\\core\\infraestructure\\models\\archivodigitalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\domaininterfaces\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,25 +153,77 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 14,
-          "SelectedChildIndex": 14,
+          "DockedWidth": 12,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "UpdateArchivoDigitalDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\UpdateArchivoDigitalDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\UpdateArchivoDigitalDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\UpdateArchivoDigitalDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\UpdateArchivoDigitalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:09:18.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateArchivoDigitalDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\CreateArchivoDigitalDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\CreateArchivoDigitalDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\CreateArchivoDigitalDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\CreateArchivoDigitalDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:09:14.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ArchivoDigitalRequestDto.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalRequestDto.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalRequestDto.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalRequestDto.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:09:12.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ArchivoDigitalRepository.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepository.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepository.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepository.cs",
+              "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:31.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ArchivoDigitalDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalDto.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalDto.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\ArchivoDigital\\ArchivoDigitalDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T16:15:11.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "IEstudiosService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Estudios\\IEstudiosService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Estudios\\IEstudiosService.cs",
@@ -139,12 +231,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Estudios\\IEstudiosService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T13:57:07.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T13:57:07.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "UpdateAgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
@@ -157,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 29,
               "Title": "AgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
@@ -165,11 +256,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA7wCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T21:29:42.868Z"
+              "WhenOpened": "2025-11-04T21:29:42.868Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 28,
               "Title": "CreateAgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
@@ -177,11 +269,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAA8wCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T21:29:42.264Z"
+              "WhenOpened": "2025-11-04T21:29:42.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "EstudiosController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\EstudiosController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\EstudiosController.cs",
@@ -189,12 +282,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\EstudiosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T21:35:51.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T21:35:51.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "AgendaRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\AgendaRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\AgendaRepository.cs",
@@ -206,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "DapperWrapper.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Persistence\\DapperWrapper.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Persistence\\DapperWrapper.cs",
@@ -218,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
               "Title": "UpdatePacienteDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Paciente\\UpdatePacienteDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Paciente\\UpdatePacienteDto.cs",
@@ -226,11 +318,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Paciente\\UpdatePacienteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T17:39:58.439Z"
+              "WhenOpened": "2025-10-31T17:39:58.439Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 34,
               "Title": "CreatePacienteDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Paciente\\CreatePacienteDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Paciente\\CreatePacienteDto.cs",
@@ -238,11 +331,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Paciente\\CreatePacienteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T17:39:55.329Z"
+              "WhenOpened": "2025-10-31T17:39:55.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 33,
               "Title": "PacienteDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Paciente\\PacienteDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Paciente\\PacienteDto.cs",
@@ -250,11 +344,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Paciente\\PacienteDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T17:39:51.302Z"
+              "WhenOpened": "2025-10-31T17:39:51.302Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "PacienteService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Paciente\\PacienteService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Paciente\\PacienteService.cs",
@@ -267,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 35,
               "Title": "PacienteEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\PacienteEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\PacienteEntity.cs",
@@ -279,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "PacienteRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\PacienteRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\PacienteRepository.cs",
@@ -287,8 +382,7 @@
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\PacienteRepository.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAAwIIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:26:27.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T15:26:27.929Z"
             },
             {
               "$type": "Document",
@@ -298,14 +392,14 @@
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\Base\\BaseCrudRepository.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\Base\\BaseCrudRepository.cs",
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\Base\\BaseCrudRepository.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAewH8AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwCUAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T14:50:29.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "IPacienteService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\Paciente\\IPacienteService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\Paciente\\IPacienteService.cs",
@@ -313,12 +407,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\Paciente\\IPacienteService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:33:29.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T14:33:29.834Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "PacienteController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\PacienteController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\PacienteController.cs",
@@ -326,12 +419,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\PacienteController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:32:43.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T14:32:43.341Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "IPacienteRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\IPacienteRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\IPacienteRepository.cs",
@@ -339,18 +431,17 @@
               "RelativeToolTip": "src\\CORE\\Domain\\DomainInterfaces\\IPacienteRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:25:34.833Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-12T15:25:34.833Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "ArchivoDigitalEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\ArchivoDigitalEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\ArchivoDigitalEntity.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\ArchivoDigitalEntity.cs",
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\ArchivoDigitalEntity.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAEwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T15:53:49.22Z",
               "EditorCaption": ""
@@ -358,38 +449,129 @@
           ]
         },
         {
-          "DockedWidth": 14,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 16,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "ArchivoDigitalServiceN.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:10:13.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IArchivoDigitalRepository.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\RepositoriesInterfaces\\IArchivoDigitalRepository.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Domain\\RepositoriesInterfaces\\IArchivoDigitalRepository.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\RepositoriesInterfaces\\IArchivoDigitalRepository.cs",
+              "RelativeToolTip": "src\\CORE\\Domain\\RepositoriesInterfaces\\IArchivoDigitalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:28.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ArchivoDigital.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\Entities\\ArchivoDigital.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Domain\\Entities\\ArchivoDigital.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\Entities\\ArchivoDigital.cs",
+              "RelativeToolTip": "src\\CORE\\Domain\\Entities\\ArchivoDigital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:26.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ICurrentArchivoDigital.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\ICurrentArchivoDigital.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\ICurrentArchivoDigital.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\ICurrentArchivoDigital.cs",
+              "RelativeToolTip": "src\\CORE\\Domain\\DomainInterfaces\\ICurrentArchivoDigital.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:25.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IArchivoDigitalRepositoryN.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\IArchivoDigitalRepositoryN.cs",
+              "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\IArchivoDigitalRepositoryN.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\IArchivoDigitalRepositoryN.cs",
+              "RelativeToolTip": "src\\CORE\\Domain\\DomainInterfaces\\IArchivoDigitalRepositoryN.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:24.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CurrentArchivoDigitalService.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\CurrentArchivoDigitalService.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\CurrentArchivoDigitalService.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\CurrentArchivoDigitalService.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\CurrentArchivoDigitalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:08:19.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IArchivoDigitalService.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\IArchivoDigitalService.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\IArchivoDigitalService.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\IArchivoDigitalService.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\IArchivoDigitalService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:07:12.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ArchivoDigitalService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigitalService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\ArchivoDigitalService.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigitalService.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\ArchivoDigitalService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAWwB0AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T15:58:44.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ArchivoDigitalRepositoryN.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepositoryN.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepositoryN.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepositoryN.cs",
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\ArchivoDigitalRepositoryN.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAmwFsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAArwB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T15:50:33.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Program.cs",
@@ -402,52 +584,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAK0DAAAAAAAAAAAmwLoDAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T16:38:01.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArchivoDigitalServiceN.cs",
-              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
-              "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
-              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
-              "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\ArchivoDigitalServiceN.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAUwPMAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T14:13:35.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ArchivoDigitalController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAywIsAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAA3wCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T13:19:24.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "IArchivoDigitalServiceN.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\IArchivoDigitalServiceN.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\IArchivoDigitalServiceN.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\IArchivoDigitalServiceN.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\ArchivoDigital\\IArchivoDigitalServiceN.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T00:05:53.254Z",
               "EditorCaption": ""

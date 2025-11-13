@@ -31,8 +31,12 @@ namespace WebApi.Application.Services.ArchivoDigital
                 _logger.LogInformation("Iniciando creación de ArchivoDigital");
 
                 var ArchivoDigitalEntity = _mapper.Map<ArchivoDigitalEntity>(createArchivoDigitalDto);
+
+                ArchivoDigitalEntity.Desktop = Environment.MachineName;
+
                 ArchivoDigitalEntity.IsDeleted = false;
                 ArchivoDigitalEntity.CreatedAt = DateTime.Now;
+
                 var newdigitalfileid = await _archivoDigitalRepository.CreateArchivoDigitalAsync(ArchivoDigitalEntity);
                 _logger.LogInformation("ArchivoDigital creado con ID: {digitalfileid}", newdigitalfileid);
                 var newArchivoDigital = await _archivoDigitalRepository.GetArchivoDigitalByIdAsync(newdigitalfileid);

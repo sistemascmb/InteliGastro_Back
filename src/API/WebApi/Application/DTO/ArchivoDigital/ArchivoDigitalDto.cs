@@ -6,7 +6,9 @@
         public DateTime Date { get; set; }
         public string Hour { get; set; }
         public string Desktop { get; set; }
-        public byte[] Archive { get; set; }
+        //public byte[] Archive { get; set; }
+        public string Archive { get; set; }
+
         public string Description { get; set; }
         public string TypeArchive { get; set; }
         public int Medical_ScheduleId { get; set; }

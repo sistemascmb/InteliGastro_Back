@@ -19,7 +19,7 @@ namespace Infraestructure.Models
         [Column]
         public string Desktop { get; set; }
         [Column]
-        public byte[] Archive { get; set; }
+        public string Archive { get; set; }
         [Column]
         public string Description { get; set; }
         [Column]
