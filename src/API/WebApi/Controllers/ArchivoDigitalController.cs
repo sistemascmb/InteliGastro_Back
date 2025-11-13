@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using Domain.RepositoriesInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -51,8 +51,49 @@ namespace WebApi.Controllers
         public async Task<IActionResult> CreateArchivoDigital([FromBody] CreateArchivoDigitalDto createArchivoDigitalDto)
         {
             _logger.LogInformation("Inicio del método CreateArchivoDigital [CRUD]");
-            var result = await _ArchivoDigitalService.CreateArchivoDigitalAsync(createArchivoDigitalDto);
-            return CreatedAtAction(nameof(GetArchivoDigitalById), new { id = result.digitalfileid }, result);
+            try
+            {
+                var result = await _ArchivoDigitalService.CreateArchivoDigitalAsync(createArchivoDigitalDto);
+                _logger.LogInformation("ArchivoDigital creado correctamente con ID: {DigitalFileId}", result.digitalfileid);
+                return CreatedAtAction(nameof(GetArchivoDigitalById), new { id = result.digitalfileid }, result);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Error de validación al crear ArchivoDigital");
+                return BadRequest(BuildErrorResponse(ex));
+            }
+            catch (AggregateException ex)
+            {
+                _logger.LogError(ex, "Error agregado al crear ArchivoDigital");
+                return StatusCode(StatusCodes.Status500InternalServerError, BuildErrorResponse(ex));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error inesperado al crear ArchivoDigital");
+                return StatusCode(StatusCodes.Status500InternalServerError, BuildErrorResponse(ex));
+            }
+        }
+
+        private object BuildErrorResponse(Exception ex)
+        {
+            var innerMessages = new List<string>();
+            var current = ex.InnerException;
+            while (current != null)
+            {
+                innerMessages.Add(current.Message);
+                current = current.InnerException;
+            }
+
+            return new
+            {
+                traceId = HttpContext.TraceIdentifier,
+                path = HttpContext?.Request?.Path.Value,
+                message = ex.Message,
+                type = ex.GetType().FullName,
+                source = ex.Source,
+                stackTrace = ex.StackTrace,
+                innerMessages
+            };
         }
 
         [HttpGet("{id}")]
