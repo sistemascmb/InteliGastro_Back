@@ -25,6 +25,11 @@
         public int TipoDoc { get; set; }
         public DateTime CreatedAt { get; set; }
         public string CreatedBy { get; set; }
+
+        public string Photo { get; set; }
+        public string Firma { get; set; }
+        public string CabeceraPlantilla { get; set; }
+
         //public DateTime UpdatedAt { get; set; }
         //public string UpdatedBy { get; set; }
         //public Boolean IsDeleted { get; set; }

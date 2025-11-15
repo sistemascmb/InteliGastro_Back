@@ -62,5 +62,11 @@ namespace Infraestructure.Models
         public string UpdatedBy { get; set; }
         [Column]
         public Boolean IsDeleted { get; set; }
+        [Column]
+        public string Photo { get; set; }
+        [Column]
+        public string Firma { get; set; }
+        [Column]
+        public string CabeceraPlantilla { get; set; }
     }
 }

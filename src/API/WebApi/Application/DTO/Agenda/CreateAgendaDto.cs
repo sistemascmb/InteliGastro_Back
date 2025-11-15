@@ -34,6 +34,7 @@
         public int? EstudioTeminadoId { get; set; }
         public int? PdfGeneradoId { get; set; }
 
-
+        public string EstructuraHtml { get; set; }
+        public string InformePdf { get; set; }
     }
 }

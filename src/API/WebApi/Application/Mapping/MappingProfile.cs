@@ -183,6 +183,9 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
                 .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
                 .ForMember(dest => dest.TipoDoc, opt => opt.MapFrom(src => src.TipoDoc))
+                .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Photo))
+                .ForMember(dest => dest.Firma, opt => opt.MapFrom(src => src.Firma))
+                .ForMember(dest => dest.CabeceraPlantilla, opt => opt.MapFrom(src => src.CabeceraPlantilla))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -210,6 +213,9 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
                 .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
                 .ForMember(dest => dest.TipoDoc, opt => opt.MapFrom(src => src.TipoDoc))
+                .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Photo))
+                .ForMember(dest => dest.Firma, opt => opt.MapFrom(src => src.Firma))
+                .ForMember(dest => dest.CabeceraPlantilla, opt => opt.MapFrom(src => src.CabeceraPlantilla))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
@@ -238,6 +244,9 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.Distrito, opt => opt.MapFrom(src => src.Distrito))
                 .ForMember(dest => dest.Pais, opt => opt.MapFrom(src => src.Pais))
                 .ForMember(dest => dest.TipoDoc, opt => opt.MapFrom(src => src.TipoDoc))
+                .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Photo))
+                .ForMember(dest => dest.Firma, opt => opt.MapFrom(src => src.Firma))
+                .ForMember(dest => dest.CabeceraPlantilla, opt => opt.MapFrom(src => src.CabeceraPlantilla))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -744,6 +753,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
                 .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
+                .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
+                .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -775,6 +786,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
                 .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
+                .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
+                .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
@@ -807,6 +820,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UrgenteId, opt => opt.MapFrom(src => src.UrgenteId))
                 .ForMember(dest => dest.EstudioTeminadoId, opt => opt.MapFrom(src => src.EstudioTeminadoId))
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
+                .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
+                .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))

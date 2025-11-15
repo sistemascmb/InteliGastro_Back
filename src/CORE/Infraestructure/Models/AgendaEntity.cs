@@ -72,6 +72,10 @@ namespace Infraestructure.Models
         public int? EstudioTeminadoId { get; set; }
         [Column]
         public int? PdfGeneradoId { get; set; }
+        [Column]
+        public string EstructuraHtml { get; set; }
+        [Column]
+        public string InformePdf { get; set; }
 
     }
 }

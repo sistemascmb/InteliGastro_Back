@@ -28,5 +28,9 @@
         public DateTime UpdatedAt { get; set; }
         public string UpdatedBy { get; set; }
         public Boolean IsDeleted { get; set; }
+
+        public string Photo { get; set; }
+        public string Firma { get; set; }
+        public string CabeceraPlantilla { get; set; }
     }
 }
