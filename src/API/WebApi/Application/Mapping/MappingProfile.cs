@@ -755,6 +755,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
                 .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
+                .ForMember(dest => dest.DictadoGuardado, opt => opt.MapFrom(src => src.DictadoGuardado))
+                .ForMember(dest => dest.Preparacion, opt => opt.MapFrom(src => src.Preparacion))
                 .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
@@ -788,6 +790,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
                 .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
+                .ForMember(dest => dest.DictadoGuardado, opt => opt.MapFrom(src => src.DictadoGuardado))
+                .ForMember(dest => dest.Preparacion, opt => opt.MapFrom(src => src.Preparacion))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
                 .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
                 .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
@@ -822,6 +826,8 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.PdfGeneradoId, opt => opt.MapFrom(src => src.PdfGeneradoId))
                 .ForMember(dest => dest.EstructuraHtml, opt => opt.MapFrom(src => src.EstructuraHtml))
                 .ForMember(dest => dest.InformePdf, opt => opt.MapFrom(src => src.InformePdf))
+                .ForMember(dest => dest.DictadoGuardado, opt => opt.MapFrom(src => src.DictadoGuardado))
+                .ForMember(dest => dest.Preparacion, opt => opt.MapFrom(src => src.Preparacion))
                 .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
                 .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))

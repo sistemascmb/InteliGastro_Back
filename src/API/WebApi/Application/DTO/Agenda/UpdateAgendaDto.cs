@@ -25,7 +25,7 @@
         public int ResourcesId { get; set; }
         public int StudiesId { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
         public Boolean IsDeleted { get; set; }
 
         public string AnotacionesAdicionales { get; set; }
@@ -35,8 +35,14 @@
         public int? EstudioTeminadoId { get; set; }
         public int? PdfGeneradoId { get; set; }
 
-        public string EstructuraHtml { get; set; }
-        public string InformePdf { get; set; }
+        public string? EstructuraHtml { get; set; }
+        public string? InformePdf { get; set; }
+
+        public int? DictadoGuardado { get; set; }
+
+        public string? Preparacion { get; set; }
+
+
 
     }
 }

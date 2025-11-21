@@ -59,7 +59,7 @@ namespace Infraestructure.Models
         [Column]
         public DateTime UpdatedAt { get; set; }
         [Column]
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
         [Column]
         public Boolean IsDeleted { get; set; }
         [Column]
@@ -73,9 +73,14 @@ namespace Infraestructure.Models
         [Column]
         public int? PdfGeneradoId { get; set; }
         [Column]
-        public string EstructuraHtml { get; set; }
+        public string? EstructuraHtml { get; set; }
         [Column]
-        public string InformePdf { get; set; }
+        public string? InformePdf { get; set; }
+        [Column]
+        public int? DictadoGuardado { get; set; }
+
+        public string? Preparacion { get; set; }
+
 
     }
 }
