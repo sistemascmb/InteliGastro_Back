@@ -161,6 +161,87 @@ namespace WebApi.Application.Services.Agenda
             }
         }
 
+        public async Task<IEnumerable<AgendaSearchResultDto>> SearchAgendaStudiesAsync(long? medicalscheduleid, string? names, string? lastNames, string? dni)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda combinada de estudios: medicalscheduleid={MedicalScheduleId}, names={Names}, lastNames={LastNames}, dni={Dni}", medicalscheduleid, names, lastNames, dni);
+
+                var hasScheduleId = medicalscheduleid.HasValue && medicalscheduleid.Value > 0;
+                var hasPatientFilters = !string.IsNullOrWhiteSpace(names) || !string.IsNullOrWhiteSpace(lastNames) || !string.IsNullOrWhiteSpace(dni);
+
+                if (!hasScheduleId && !hasPatientFilters)
+                {
+                    throw new ArgumentException("Debe proporcionar al menos uno de los filtros: medicalscheduleid, nombres, apellidos o DNI.");
+                }
+
+                // Buscar pacientes si hay filtros de paciente
+                var matchedPacientes = new List<Infraestructure.Models.PacienteEntity>();
+                if (hasPatientFilters)
+                {
+                    var pacientes = await _pacienteRepository.SearchPacientesAsync(dni, names, lastNames);
+                    matchedPacientes = pacientes
+                        .Select(p => (Infraestructure.Models.PacienteEntity)p)
+                        .ToList();
+
+                    _logger.LogInformation("Pacientes coincidentes: {Count}", matchedPacientes.Count);
+                }
+
+                var pacientIds = matchedPacientes.Select(p => (int)p.pacientid).Distinct().ToArray();
+
+                // Buscar agendas por filtros
+                var agendas = await _AgendaRepository.SearchAgendaByFiltersAsync(medicalscheduleid, pacientIds);
+                var agendaEntities = agendas.Select(a => (Infraestructure.Models.AgendaEntity)a).ToList();
+
+                _logger.LogInformation("Agendas coincidentes: {Count}", agendaEntities.Count);
+
+                // Cache local de pacientes para enriquecer resultados
+                var pacienteCache = matchedPacientes.ToDictionary(p => (int)p.pacientid, p => p);
+
+                var results = new List<AgendaSearchResultDto>();
+
+                foreach (var agenda in agendaEntities)
+                {
+                    Infraestructure.Models.PacienteEntity? pacienteEntity;
+                    if (!pacienteCache.TryGetValue(agenda.PacientId, out pacienteEntity))
+                    {
+                        var pacienteObj = await _pacienteRepository.GetPacienteByIdAsync(agenda.PacientId);
+                        pacienteEntity = pacienteObj as Infraestructure.Models.PacienteEntity;
+                        if (pacienteEntity != null)
+                        {
+                            pacienteCache[agenda.PacientId] = pacienteEntity;
+                        }
+                    }
+
+                    var dto = new AgendaSearchResultDto
+                    {
+                        medicalscheduleid = agenda.medicalscheduleid,
+                        PacientId = agenda.PacientId,
+                        AppointmentDate = agenda.AppointmentDate,
+                        StudiesId = agenda.StudiesId,
+                        Status = agenda.Status,
+                        DocumentNumber = pacienteEntity?.DocumentNumber ?? string.Empty,
+                        Names = pacienteEntity?.Names ?? string.Empty,
+                        LastNames = pacienteEntity?.LastNames ?? string.Empty
+                    };
+
+                    results.Add(dto);
+                }
+
+                _logger.LogInformation("Búsqueda combinada completada. Resultados: {Count}", results.Count);
+                return results;
+            }
+            catch (ArgumentException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al realizar la búsqueda combinada de estudios");
+                throw;
+            }
+        }
+
         public async Task<AgendaDto> GetAgendaByIdAsync(long AgendaId)
         {
             try

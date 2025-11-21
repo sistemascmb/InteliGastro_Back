@@ -165,10 +165,10 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticw
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticwebassets.build.json.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticwebassets.development.json
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticwebassets.build.endpoints.json
-D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\WebApi.csproj.Up2Date
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\WebApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\refint\WebApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\WebApi.pdb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\WebApi.genruntimeconfig.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\ref\WebApi.dll
+D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Release\net9.0\staticwebassets.upToDateCheck.txt

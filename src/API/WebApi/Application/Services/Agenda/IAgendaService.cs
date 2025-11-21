@@ -11,5 +11,6 @@ namespace WebApi.Application.Services.Agenda
         Task<IEnumerable<AgendaDto>> GetWhereAsync(string condicion);
         Task<IEnumerable<AgendaDto>> GetAllAgendaAsync();
         Task<IEnumerable<AgendaDto>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate);
+        Task<IEnumerable<AgendaSearchResultDto>> SearchAgendaStudiesAsync(long? medicalscheduleid, string? names, string? lastNames, string? dni);
     }
 }

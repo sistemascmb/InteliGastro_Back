@@ -127,5 +127,33 @@ namespace WebApi.Controllers
             var result = await _AgendaService.GetWhereAsync(condicion);
             return Ok(result);
         }
+
+        [HttpGet("search/studies")]
+        [ProducesResponseType(typeof(IEnumerable<AgendaSearchResultDto>), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public async Task<ActionResult> SearchStudies(
+            [FromQuery] long? medicalscheduleid,
+            [FromQuery] string? names,
+            [FromQuery(Name = "lastNames")] string? lastNames,
+            [FromQuery(Name = "dni")] string? dni)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando endpoint SearchStudies con filtros: medicalscheduleid={MedicalScheduleId}, names={Names}, lastNames={LastNames}, dni={Dni}", medicalscheduleid, names, lastNames, dni);
+                var result = await _AgendaService.SearchAgendaStudiesAsync(medicalscheduleid, names, lastNames, dni);
+                return Ok(result);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Error de validación en búsqueda de estudios");
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar estudios");
+                return StatusCode(500, "Error interno del servidor al procesar la solicitud");
+            }
+        }
     }
 }

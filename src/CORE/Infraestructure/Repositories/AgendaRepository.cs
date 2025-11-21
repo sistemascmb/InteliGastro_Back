@@ -88,5 +88,50 @@ namespace Infraestructure.Repositories
                 throw;
             }
         }
+
+        public async Task<IEnumerable<object>> SearchAgendaByFiltersAsync(long? medicalscheduleid, IEnumerable<int>? pacientIds)
+        {
+            try
+            {
+                _logger.LogInformation("Iniciando búsqueda de agenda por filtros: medicalscheduleid={MedicalScheduleId}, pacientIdsCount={Count}", medicalscheduleid, pacientIds?.Count() ?? 0);
+
+                var whereConditions = new List<string>();
+                var parameters = new DynamicParameters();
+
+                if (medicalscheduleid.HasValue)
+                {
+                    whereConditions.Add("\"medicalscheduleid\" = @medicalscheduleid");
+                    parameters.Add("medicalscheduleid", medicalscheduleid.Value);
+                }
+
+                if (pacientIds != null && pacientIds.Any())
+                {
+                    whereConditions.Add("\"PacientId\" = ANY(@PacientIds)");
+                    parameters.Add("PacientIds", pacientIds.ToArray());
+                }
+
+                whereConditions.Add("\"IsDeleted\" = false");
+
+                string whereClause;
+                if (whereConditions.Count > 1)
+                {
+                    var filters = whereConditions.Take(whereConditions.Count - 1);
+                    whereClause = $"({string.Join(" OR ", filters)}) AND {whereConditions.Last()}";
+                }
+                else
+                {
+                    whereClause = whereConditions.Last();
+                }
+
+                var result = await GetByConditionAsync(whereClause, parameters);
+                _logger.LogInformation("Búsqueda por filtros completada. Registros: {Count}", result.Count());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al buscar agenda por filtros");
+                throw;
+            }
+        }
     }
 }

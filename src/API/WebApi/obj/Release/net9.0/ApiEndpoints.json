@@ -280,6 +280,57 @@
     ]
   },
   {
+    "ContainingType": "WebApi.Controllers.AgendaController",
+    "Method": "SearchStudies",
+    "RelativePath": "api/Agenda/search/studies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "medicalscheduleid",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "names",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lastNames",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "dni",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebApi.Application.DTO.Agenda.AgendaSearchResultDto, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
     "ContainingType": "WebApi.Controllers.AgendaDxController",
     "Method": "CreateAgendaDx",
     "RelativePath": "api/AgendaDx",

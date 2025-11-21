@@ -13,5 +13,6 @@ namespace Domain.DomainInterfaces
         Task<bool> UpdateAgendaAsync(object AgendaData);
         Task<IEnumerable<object>> GetAllAgendaAsync();
         Task<IEnumerable<object>> SearchAgendaByDateRangeAsync(DateTime startDate, DateTime endDate);
+        Task<IEnumerable<object>> SearchAgendaByFiltersAsync(long? medicalscheduleid, IEnumerable<int>? pacientIds);
     }
 }

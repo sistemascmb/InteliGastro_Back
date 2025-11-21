@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\agendadxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\agendadx\\agendadxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\agendadx\\agendadxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\agendadx\\iagendadxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\application\\services\\agendadx\\iagendadxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A6D7A1FD-92BC-4121-83C5-0E37DF6CE37B}|src\\CORE\\Domain\\Domain.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\core\\domain\\domaininterfaces\\iagendadxrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,12 +94,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\CentroController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:27:09.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:27:09.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ArchivoDigitalController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\ArchivoDigitalController.cs",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\Cie10Controller.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:22:28.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:22:28.545Z"
             },
             {
               "$type": "Document",
@@ -133,8 +131,7 @@
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\EstudiosEntity.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:16:19.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:16:19.486Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\CreateAgendaDx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:03:03.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:03:03.249Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\AgendaDxDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:02:48.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:02:48.9Z"
             },
             {
               "$type": "Document",
@@ -184,8 +179,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:06:06.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T22:06:06.622Z"
             },
             {
               "$type": "Document",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAcwCgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:06:02.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T22:06:02.235Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:05:48.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T22:05:48.628Z"
             },
             {
               "$type": "Document",
@@ -235,8 +227,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "ViewState": "AgIAANkDAAAAAAAAAAAmwOMDAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T16:34:14.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T16:34:14.19Z"
             }
           ]
         },
@@ -254,8 +245,7 @@
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Repositories\\AgendaDxRepository.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAmwFUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:15:19.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:15:19.989Z"
             },
             {
               "$type": "Document",
@@ -267,12 +257,11 @@
               "RelativeToolTip": "src\\CORE\\Domain\\DomainInterfaces\\IAgendaDxRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:13:28.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:13:28.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AgendaDxService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\AgendaDx\\AgendaDxService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\AgendaDxService.cs",
@@ -280,12 +269,11 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\AgendaDxService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwBQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:48:04.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:48:04.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IAgendaDxService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\AgendaDx\\IAgendaDxService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\IAgendaDxService.cs",
@@ -293,8 +281,7 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\IAgendaDxService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:24:49.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:24:49.405Z"
             },
             {
               "$type": "Document",
@@ -306,8 +293,7 @@
               "RelativeToolTip": "src\\CORE\\Infraestructure\\Models\\AgendaDxEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:15:38.984Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T17:15:38.984Z"
             },
             {
               "$type": "Document",
@@ -317,7 +303,7 @@
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\AgendaDxController.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\AgendaDxController.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\AgendaDxController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAcwGYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAcwFkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T17:23:03.608Z",
               "EditorCaption": ""
