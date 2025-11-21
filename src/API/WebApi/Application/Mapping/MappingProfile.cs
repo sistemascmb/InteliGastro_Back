@@ -3,6 +3,7 @@ using Domain.Entities;
 using Infraestructure.Models;
 using Microsoft.AspNetCore.Hosting.Server;
 using WebApi.Application.DTO.Agenda;
+using WebApi.Application.DTO.AgendaDx;
 using WebApi.Application.DTO.ArchivoDigital;
 using WebApi.Application.DTO.Centro;
 using WebApi.Application.DTO.Cie10;
@@ -1003,6 +1004,39 @@ namespace WebApi.Application.Mapping
                 .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
                 .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
 
+
+            //AgendaDx
+            CreateMap<AgendaDxEntity, AgendaDxDto>()
+                .ForMember(dest => dest.medicalscheduledxid, opt => opt.MapFrom(src => src.medicalscheduledxid))
+                .ForMember(dest => dest.cie10id, opt => opt.MapFrom(src => src.cie10id))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.MapFrom(src => src.IsDeleted));
+
+            CreateMap<CreateAgendaDx, AgendaDxEntity>()
+                .ForMember(dest => dest.cie10id, opt => opt.MapFrom(src => src.cie10id))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se establece en el servicio
+                .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.UpdatedAt, opt => opt.Ignore())
+                .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
+
+            CreateMap<UpdateAgendaDx, AgendaDxEntity>()
+                .ForMember(dest => dest.medicalscheduledxid, opt => opt.MapFrom(src => src.medicalscheduledxid))
+                .ForMember(dest => dest.cie10id, opt => opt.MapFrom(src => src.cie10id))
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.Medical_ScheduleId, opt => opt.MapFrom(src => src.Medical_ScheduleId))
+                .ForMember(dest => dest.CreatedAt, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.CreatedBy, opt => opt.Ignore()) // Se mantiene el valor original
+                .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.UpdatedAt))
+                .ForMember(dest => dest.UpdatedBy, opt => opt.MapFrom(src => src.UpdatedBy))
+                .ForMember(dest => dest.IsDeleted, opt => opt.Ignore());
 
             //CreateMap<ServerFilterRequestDto, ServerFilter>();
         }

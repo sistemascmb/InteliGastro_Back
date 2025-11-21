@@ -166,7 +166,6 @@ D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticweb
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.development.json
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.csproj.Up2Date
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\WebApi.dll
 D:\DEV\API_INTELGASTRO\API_INTELGASTRO\src\API\WebApi\obj\Debug\net9.0\refint\WebApi.dll
