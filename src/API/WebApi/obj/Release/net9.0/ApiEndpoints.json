@@ -5136,6 +5136,49 @@
   },
   {
     "ContainingType": "WebApi.Controllers.SystemUsersController",
+    "Method": "Login",
+    "RelativePath": "api/SystemUsers/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "WebApi.Application.DTO.SystemUsers.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebApi.Application.DTO.SystemUsers.SystemUsersLoginResponseDto",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebApi.Controllers.SystemUsersController",
     "Method": "GetWhere",
     "RelativePath": "api/SystemUsers/search",
     "HttpMethod": "GET",

@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\agendadxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\agendadxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\systemuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\systemuserscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\archivodigitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\controllers\\agendadxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|solutionrelative:src\\api\\webapi\\controllers\\agendadxcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C34F1E99-7DE1-4688-82D2-113865ED4D49}|src\\API\\WebApi\\WebApi.csproj|d:\\dev\\api_intelgastro\\api_intelgastro\\src\\api\\webapi\\application\\services\\agendadx\\agendadxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,12 +89,25 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 4,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "SystemUsersController.cs",
+              "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
+              "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
+              "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
+              "RelativeToolTip": "src\\API\\WebApi\\Controllers\\SystemUsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T23:36:03.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CentroController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\CentroController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\CentroController.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Cie10Controller.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\Cie10Controller.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\Cie10Controller.cs",
@@ -127,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "EstudiosEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\EstudiosEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\EstudiosEntity.cs",
@@ -139,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CreateAgendaDx.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\AgendaDx\\CreateAgendaDx.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\CreateAgendaDx.cs",
@@ -147,11 +164,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\CreateAgendaDx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:03:03.249Z"
+              "WhenOpened": "2025-11-21T17:03:03.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AgendaDxDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\AgendaDx\\AgendaDxDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\AgendaDxDto.cs",
@@ -159,11 +177,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\AgendaDx\\AgendaDxDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T17:02:48.9Z"
+              "WhenOpened": "2025-11-21T17:02:48.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AgendaEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\AgendaEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\AgendaEntity.cs",
@@ -175,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "UpdateAgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
@@ -183,11 +202,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\UpdateAgendaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:06:06.622Z"
+              "WhenOpened": "2025-11-18T22:06:06.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "CreateAgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
@@ -195,11 +215,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\CreateAgendaDto.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAcwCgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:06:02.235Z"
+              "WhenOpened": "2025-11-18T22:06:02.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AgendaDto.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
@@ -207,11 +228,12 @@
               "RelativeToolTip": "src\\API\\WebApi\\Application\\DTO\\Agenda\\AgendaDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T22:05:48.628Z"
+              "WhenOpened": "2025-11-18T22:05:48.628Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "PersonalEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\PersonalEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\PersonalEntity.cs",
@@ -223,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Mapping\\MappingProfile.cs",
@@ -236,7 +258,7 @@
           ]
         },
         {
-          "DockedWidth": 12,
+          "DockedWidth": 10,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -247,14 +269,14 @@
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\AgendaController.cs",
               "ToolTip": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\AgendaController.cs",
               "RelativeToolTip": "src\\API\\WebApi\\Controllers\\AgendaController.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAuwI8AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwIUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T23:14:10.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AgendaDxRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Repositories\\AgendaDxRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Repositories\\AgendaDxRepository.cs",
@@ -266,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IAgendaDxRepository.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Domain\\DomainInterfaces\\IAgendaDxRepository.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Domain\\DomainInterfaces\\IAgendaDxRepository.cs",
@@ -278,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AgendaDxService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\AgendaDx\\AgendaDxService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\AgendaDxService.cs",
@@ -291,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IAgendaDxService.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Application\\Services\\AgendaDx\\IAgendaDxService.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Application\\Services\\AgendaDx\\IAgendaDxService.cs",
@@ -303,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AgendaDxEntity.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\CORE\\Infraestructure\\Models\\AgendaDxEntity.cs",
               "RelativeDocumentMoniker": "src\\CORE\\Infraestructure\\Models\\AgendaDxEntity.cs",
@@ -315,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AgendaDxController.cs",
               "DocumentMoniker": "D:\\DEV\\API_INTELGASTRO\\API_INTELGASTRO\\src\\API\\WebApi\\Controllers\\AgendaDxController.cs",
               "RelativeDocumentMoniker": "src\\API\\WebApi\\Controllers\\AgendaDxController.cs",

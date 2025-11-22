@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +18,9 @@ namespace Domain.DomainInterfaces
         Task<bool> ExistsAsync(int id);
 
         Task<IEnumerable<object>> GetAllSystemUsersAsync();
+
+        // Login
+        Task<object?> GetByCredentialsAsync(string username, string password);
 
     }
 }

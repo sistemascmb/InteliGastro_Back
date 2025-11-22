@@ -1,4 +1,4 @@
-﻿using WebApi.Application.DTO.Recursos;
+using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.SystemUsers;
 
 namespace WebApi.Application.Services.SystemUsersService
@@ -13,6 +13,9 @@ namespace WebApi.Application.Services.SystemUsersService
 
         Task<IEnumerable<SystemUsersDto>> GetWhereAsync(string condicion);
         Task<IEnumerable<SystemUsersDto>> GetAllSystemUsersAsync();
+
+        // Login
+        Task<SystemUsersLoginResponseDto> LoginAsync(LoginRequestDto loginRequestDto);
 
 
     }

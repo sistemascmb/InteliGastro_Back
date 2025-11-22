@@ -17,6 +17,18 @@ namespace WebApi.Controllers
             _systemUsers = systemUsers ?? throw new ArgumentNullException(nameof(systemUsers));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
+
+        [HttpPost("login")]
+        [ProducesResponseType(typeof(SystemUsersLoginResponseDto), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [ProducesResponseType(500)]
+        public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequest)
+        {
+            _logger.LogInformation("Iniciando login para usuario: {Usuario}", loginRequest?.Usuario);
+            var result = await _systemUsers.LoginAsync(loginRequest);
+            return Ok(result);
+        }
         [HttpPost]
         [ProducesResponseType(typeof(SystemUsersDto), 201)]
         [ProducesResponseType(400)]

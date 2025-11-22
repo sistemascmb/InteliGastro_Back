@@ -13,6 +13,7 @@ namespace WebApi.Application.Services.Agenda
         private readonly ICentroRepository _centroRepository;
         private readonly IPacienteRepository _pacienteRepository;
         private readonly IPersonalRepository _personalRepository;
+        private readonly IEstudiosRepository _estudiosRepository;
 
 
         private readonly IMapper _mapper;
@@ -22,6 +23,7 @@ namespace WebApi.Application.Services.Agenda
             ICentroRepository centroRepository,
             IPacienteRepository pacienteRepository,
             IPersonalRepository personalRepository,
+            IEstudiosRepository estudiosRepository,
             IMapper mapper)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -29,6 +31,7 @@ namespace WebApi.Application.Services.Agenda
             _centroRepository = centroRepository ?? throw new ArgumentNullException(nameof(centroRepository));
             _pacienteRepository = pacienteRepository ?? throw new ArgumentNullException(nameof(pacienteRepository));
             _personalRepository = personalRepository ?? throw new ArgumentNullException(nameof(personalRepository));
+            _estudiosRepository = estudiosRepository ?? throw new ArgumentNullException(nameof(estudiosRepository));
 
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
@@ -199,6 +202,9 @@ namespace WebApi.Application.Services.Agenda
                 var pacienteCache = matchedPacientes.ToDictionary(p => (int)p.pacientid, p => p);
 
                 var results = new List<AgendaSearchResultDto>();
+                var centroCache = new Dictionary<int, Infraestructure.Models.CentroEntity>();
+                var personalCache = new Dictionary<int, Infraestructure.Models.PersonalEntity>();
+                var estudiosCache = new Dictionary<int, Infraestructure.Models.EstudiosEntity>();
 
                 foreach (var agenda in agendaEntities)
                 {
@@ -213,16 +219,90 @@ namespace WebApi.Application.Services.Agenda
                         }
                     }
 
+                    var agendaDto = _mapper.Map<AgendaDto>(agenda);
+
+                    // Enriquecer con datos derivados (Centro y Personal)
+                    Infraestructure.Models.CentroEntity? centroEntity;
+                    if (!centroCache.TryGetValue(agenda.CentroId, out centroEntity))
+                    {
+                        var centroObj = await _centroRepository.GetCentroByIdAsync(agenda.CentroId);
+                        centroEntity = centroObj as Infraestructure.Models.CentroEntity;
+                        if (centroEntity != null)
+                        {
+                            centroCache[agenda.CentroId] = centroEntity;
+                        }
+                    }
+
+                    Infraestructure.Models.PersonalEntity? personalEntity;
+                    if (!personalCache.TryGetValue(agenda.PersonalId, out personalEntity))
+                    {
+                        var personalObj = await _personalRepository.GetPersonalByIdAsync(agenda.PersonalId);
+                        personalEntity = personalObj as Infraestructure.Models.PersonalEntity;
+                        if (personalEntity != null)
+                        {
+                            personalCache[agenda.PersonalId] = personalEntity;
+                        }
+                    }
+
+                    // Estudio derivado
+                    Infraestructure.Models.EstudiosEntity? estudioEntity;
+                    if (!estudiosCache.TryGetValue(agenda.StudiesId, out estudioEntity))
+                    {
+                        var estudioObj = await _estudiosRepository.GetEstudiosByIdAsync((long)agenda.StudiesId);
+                        estudioEntity = estudioObj as Infraestructure.Models.EstudiosEntity;
+                        if (estudioEntity != null)
+                        {
+                            estudiosCache[agenda.StudiesId] = estudioEntity;
+                        }
+                    }
                     var dto = new AgendaSearchResultDto
                     {
-                        medicalscheduleid = agenda.medicalscheduleid,
-                        PacientId = agenda.PacientId,
-                        AppointmentDate = agenda.AppointmentDate,
-                        StudiesId = agenda.StudiesId,
-                        Status = agenda.Status,
+                        // Campos principales
+                        medicalscheduleid = agendaDto.medicalscheduleid,
+                        PacientId = agendaDto.PacientId,
+                        CentroId = agendaDto.CentroId,
+                        PersonalId = agendaDto.PersonalId,
+                        AppointmentDate = agendaDto.AppointmentDate,
+                        HoursMedicalShedule = agendaDto.HoursMedicalShedule,
+                        TypeofAppointment = agendaDto.TypeofAppointment,
+                        OriginId = agendaDto.OriginId,
+                        OtherOrigins = agendaDto.OtherOrigins,
+                        InsuranceId = agendaDto.InsuranceId,
+                        LetterOfGuarantee = agendaDto.LetterOfGuarantee,
+                        StudiesId = agendaDto.StudiesId,
+                        Status = agendaDto.Status,
+                        TypeOfAttention = agendaDto.TypeOfAttention,
+                        TypeOfPatient = agendaDto.TypeOfPatient,
+                        Referral_doctorsId = agendaDto.Referral_doctorsId,
+                        CenterOfOriginId = agendaDto.CenterOfOriginId,
+                        AnotherCenter = agendaDto.AnotherCenter,
+                        ProcedureRoomId = agendaDto.ProcedureRoomId,
+                        ResourcesId = agendaDto.ResourcesId,
+                        CreatedAt = agendaDto.CreatedAt,
+                        CreatedBy = agendaDto.CreatedBy,
+                        UpdatedAt = agendaDto.UpdatedAt,
+                        UpdatedBy = agendaDto.UpdatedBy,
+                        IsDeleted = agendaDto.IsDeleted,
+                        AnotacionesAdicionales = agendaDto.AnotacionesAdicionales,
+                        TipoProcedimientoId = agendaDto.TipoProcedimientoId,
+                        UrgenteId = agendaDto.UrgenteId,
+                        EstudioTeminadoId = agendaDto.EstudioTeminadoId,
+                        PdfGeneradoId = agendaDto.PdfGeneradoId,
+                        EstructuraHtml = agendaDto.EstructuraHtml,
+                        InformePdf = agendaDto.InformePdf,
+                        DictadoGuardado = agendaDto.DictadoGuardado,
+                        Preparacion = agendaDto.Preparacion,
+
+                        // Datos del paciente
                         DocumentNumber = pacienteEntity?.DocumentNumber ?? string.Empty,
                         Names = pacienteEntity?.Names ?? string.Empty,
-                        LastNames = pacienteEntity?.LastNames ?? string.Empty
+                        LastNames = pacienteEntity?.LastNames ?? string.Empty,
+
+                        // Derivados
+                        CentroNombre = centroEntity?.Nombre ?? string.Empty,
+                        PersonalNombres = personalEntity?.Nombres ?? string.Empty,
+                        PersonalApellidos = personalEntity?.Apellidos ?? string.Empty,
+                        StudiesName = estudioEntity?.Name ?? string.Empty
                     };
 
                     results.Add(dto);

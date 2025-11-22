@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text.Json;
+using WebApi.Application.Exceptions;
 
 namespace API_CMB.src.API.WebApi.Middleware
 {
@@ -37,44 +38,50 @@ namespace API_CMB.src.API.WebApi.Middleware
             {
                 case ArgumentNullException:
                     response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    response.Message = "Invalid request: Missing required parameter.";
+                    response.Message = "Solicitud inválida: falta un parámetro requerido.";
                     response.Details = exception.Message;
                     break;
 
                 case ArgumentException:
                     response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    response.Message = "Invalid request: Invalid parameter value.";
+                    response.Message = "Solicitud inválida: valor de parámetro inválido.";
                     response.Details = exception.Message;
                     break;
 
                 case InvalidOperationException:
                     response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    response.Message = "Invalid operation.";
+                    response.Message = "Operación no permitida.";
                     response.Details = exception.Message;
                     break;
 
                 case KeyNotFoundException:
                     response.StatusCode = (int)HttpStatusCode.NotFound;
-                    response.Message = "Resource not found.";
+                    response.Message = "Recurso no encontrado.";
                     response.Details = exception.Message;
                     break;
 
                 case UnauthorizedAccessException:
                     response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                    response.Message = "Unauthorized access.";
+                    response.Message = "Acceso no autorizado.";
+                    response.Details = exception.Message;
+                    break;
+
+                case ForbiddenException:
+                    response.StatusCode = (int)HttpStatusCode.Forbidden;
+                    response.Message = "Acceso prohibido.";
                     response.Details = exception.Message;
                     break;
 
                 case TimeoutException:
                     response.StatusCode = (int)HttpStatusCode.RequestTimeout;
-                    response.Message = "Request timeout.";
+                    response.Message = "Tiempo de espera excedido.";
                     response.Details = exception.Message;
                     break;
 
                 default:
                     response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                    response.Message = "An internal server error occurred.";
-                    response.Details = "Please contact support if the problem persists.";
+                    response.Message = "Error interno del servidor.";
+                    response.Details = "Por favor, contacte al soporte si el problema persiste.";
                     break;
             }
 

@@ -68,6 +68,16 @@ namespace Infraestructure.Repositories
             return SystemUsers.ContinueWith(t => t.Result.Cast<object>());
         }
 
+        public async Task<object?> GetByCredentialsAsync(string username, string password)
+        {
+            _logger.LogInformation("Intentando login para usuario: {Usuario}", username);
+            var whereClause = "\"Usuario\" = @Usuario AND \"Contraseña\" = @Contraseña AND \"IsDeleted\" = false AND \"Estado\" = true";
+            var parameters = new { Usuario = username, Contraseña = password };
+            var result = await GetSingleByConditionAsync(whereClause, parameters);
+            _logger.LogInformation("Resultado login usuario {Usuario}: {Estado}", username, result != null ? "Encontrado" : "No encontrado");
+            return result;
+        }
+
         // ===== MÉTODOS AUXILIARES =====
         //METODO: Implementar AutoMapper o similar para mapeo automático
         private SystemUsersEntity ConvertToSystemUsersEntity(object data)

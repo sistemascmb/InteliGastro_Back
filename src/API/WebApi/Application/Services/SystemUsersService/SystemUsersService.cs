@@ -1,21 +1,24 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Domain.DomainInterfaces;
 using Infraestructure.Models;
 using Infraestructure.Repositories;
 using WebApi.Application.DTO.Recursos;
 using WebApi.Application.DTO.SystemUsers;
+using WebApi.Application.Exceptions;
 
 namespace WebApi.Application.Services.SystemUsersService
 {
     public class SystemUsersService : ISystemUsersService
     {
         private readonly ISystemUsersRepository _systemUsersRepository;
+        private readonly IRolesRepository _rolesRepository;
         private readonly ILogger<SystemUsersService> _logger;
         private readonly IMapper _mapper;
 
-        public SystemUsersService(ISystemUsersRepository systemUsersRepository, ILogger<SystemUsersService> logger, IMapper mapper)
+        public SystemUsersService(ISystemUsersRepository systemUsersRepository, IRolesRepository rolesRepository, ILogger<SystemUsersService> logger, IMapper mapper)
         {
             _systemUsersRepository = systemUsersRepository ?? throw new ArgumentNullException(nameof(systemUsersRepository));
+            _rolesRepository = rolesRepository ?? throw new ArgumentNullException(nameof(rolesRepository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
@@ -245,6 +248,81 @@ namespace WebApi.Application.Services.SystemUsersService
             catch (Exception)
             {
                 _logger.LogError("Error al obtener los SystemUsers.");
+                throw;
+            }
+        }
+
+        public async Task<SystemUsersLoginResponseDto> LoginAsync(LoginRequestDto loginRequestDto)
+        {
+            try
+            {
+                if (loginRequestDto == null)
+                {
+                    throw new ArgumentNullException(nameof(loginRequestDto));
+                }
+
+                _logger.LogInformation("Iniciando login para usuario: {Usuario}", loginRequestDto.Usuario);
+
+                if (string.IsNullOrWhiteSpace(loginRequestDto.Usuario))
+                {
+                    throw new ArgumentException("El campo 'usuario' es obligatorio.");
+                }
+                if (string.IsNullOrWhiteSpace(loginRequestDto.Contraseña))
+                {
+                    throw new ArgumentException("El campo 'contraseña' es obligatorio.");
+                }
+
+                var userObj = await _systemUsersRepository.GetByCredentialsAsync(loginRequestDto.Usuario, loginRequestDto.Contraseña);
+                if (userObj == null)
+                {
+                    throw new UnauthorizedAccessException("Credenciales inválidas.");
+                }
+
+                var userEntity = (SystemUsersEntity)userObj;
+
+                if (userEntity.IsDeleted || !userEntity.Estado)
+                {
+                    throw new ForbiddenException("Usuario inactivo o eliminado.");
+                }
+
+                long profileId = userEntity.profiletypeid ?? 0;
+                string profileName = string.Empty;
+
+                if (profileId > 0)
+                {
+                    var roleObj = await _rolesRepository.GetRolesByIdAsync(profileId);
+                    if (roleObj == null)
+                    {
+                        throw new KeyNotFoundException($"No se encontró el rol con ID: {profileId}.");
+                    }
+
+                    var roleEntity = (RolesEntity)roleObj;
+                    if (roleEntity.IsDeleted)
+                    {
+                        throw new InvalidOperationException($"El rol con ID: {profileId} está eliminado lógicamente.");
+                    }
+
+                    profileName = roleEntity.profile_name;
+                }
+                else
+                {
+                    profileName = "Sin rol";
+                }
+
+                var response = new SystemUsersLoginResponseDto
+                {
+                    userid = userEntity.userid,
+                    Usuario = userEntity.Usuario,
+                    profiletypeid = profileId,
+                    profile_name = profileName
+                };
+
+                _logger.LogInformation("Login exitoso para usuario: {Usuario}", loginRequestDto.Usuario);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error en login para usuario: {Usuario}", loginRequestDto?.Usuario);
                 throw;
             }
         }
